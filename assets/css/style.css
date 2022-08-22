@@ -315,6 +315,10 @@ header .menu {
    form {
       padding: 1em 0 0 0;
    }
+   .box-btn-progresso {
+      width: 30%;
+   }
+
 }
 
 @media screen and (min-width: 768px) {
