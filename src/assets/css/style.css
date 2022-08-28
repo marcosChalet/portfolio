@@ -275,7 +275,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-   border-color: #2596be;
+   border-color: #00d235;
    outline: none;
 }
 
@@ -290,7 +290,9 @@ input:focus, textarea:focus {
 }
 
 .btn button:hover {
-   border-color: #00d235;
+   background: #00d235;
+   border-color: #000;
+   color: #000;
 }
 
 header .menu {
