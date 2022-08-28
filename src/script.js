@@ -1,3 +1,4 @@
+import './assets'
 const progresso = document.getElementById('progresso')
 const botoes = document.querySelectorAll('.btn-item')
 const camposDescricao = document.querySelectorAll('.descricao')
@@ -13,7 +14,7 @@ botoes.forEach((botao, indice) => {
 })
 
 // Mover automaticamente
-apresentacaoAuto = () => {
+function apresentacaoAuto() {
    mover(carreiraSelecionada)
    setTimeout(() => apresentacaoAuto(), 4000)
 }
