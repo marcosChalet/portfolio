@@ -9,10 +9,10 @@ module.exports = {
    entry: "./src/script.js",
    output: {
       filename: "script.js",
-      path: __dirname + "/build"
+      path: __dirname + "/docs"
    },
    devServer: {
-      static: "./build",
+      static: "./docs",
       port: 8080
    },
    optimization: {
