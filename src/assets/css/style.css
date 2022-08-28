@@ -73,8 +73,8 @@ header {
    flex-direction: column-reverse;
    justify-content: space-between;
    align-items: flex-start;
-   margin-top: 40px;
 }
+
 .apresentacao {
    text-align: center;
 }
@@ -95,7 +95,6 @@ header {
    flex-wrap: wrap;
    justify-content: flex-start;
    align-items: center;
-   padding-top: 20px;
    height: 200px;
    width: 100%;
 }
@@ -106,7 +105,6 @@ header {
    align-items: center;
    width: 45%;
    position: relative;
-   margin: 20px 0 50px 0;
 }
 
 .progresso {
@@ -148,12 +146,14 @@ header {
 .apresentacao {
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   height: 600px;
 }
 
 .apresentacao h1{
    font-size: 2.8rem;
    font-weight: 800;
-   padding-bottom: 30px;
+   padding-bottom: 60px;
 }
 
 .apresentacao p {
