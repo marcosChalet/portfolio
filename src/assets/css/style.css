@@ -48,7 +48,7 @@ header {
    display: inline-flex;
    align-items: center;
    height: 70px;
-   border-bottom: solid 1px rgba(170, 170, 170, .3);
+   border-bottom: solid 1px rgba(170, 170, 170, 0);
 }
 
 .menu li:hover {
