@@ -48,11 +48,12 @@ header {
    display: inline-flex;
    align-items: center;
    height: 70px;
-   border-bottom: solid 1px rgba(170, 170, 170, 0);
+   border-bottom: solid 3px rgba(170, 170, 170, 0);
+   transition: .3s ease-in;
 }
 
 .menu li:hover {
-   border-bottom: 1px solid #00d235;
+   border-bottom: 3px solid #00d235;
 }
 
 .menu li a, .logo a {
