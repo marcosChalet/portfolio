@@ -111,10 +111,13 @@
 
          <section id="contato" class="section">
             <div class="container">
-               <form class="formulario">
+               <form class="formulario" action="https://api.staticforms.xyz/submit" method="post">
+                  <input type="hidden" name="accessKey" value="5668099e-a183-46a8-bc2c-d5c187855146">
+                  <input type="hidden" name="redirectTo" value="https://marcoschalet.github.io/portfolio/">
+
                   <div>
                     <label for="userName">Nome</label>
-                    <input type="text" name="nome" id="userName">
+                    <input type="text" name="name" id="userName">
                   </div>
 
                   <div>
@@ -124,7 +127,7 @@
 
                   <div>
                      <label for="msg">Mensagem</label>
-                     <textarea id="msg" rows="7"></textarea>
+                     <textarea id="msg" rows="7" name="message"></textarea>
                   </div>
                   <div class="btn">
                      <button type="submit">Enviar</button>
