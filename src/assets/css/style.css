@@ -196,21 +196,25 @@ header {
 .proj8 {
    grid-area: c8;
 }
+.proj9 {
+   grid-area: c9;
+}
 
 .grid-projetos {
    display: grid;
 
    grid-template-areas: 
-      "c1 c2 c3"
-      "c1 c4 c5"
-      "c6 c6 c6"
-      "c7 c8 c8"
+      "c1 c2 c3" 
+      "c1 c4 c5" 
+      "c6 c6 c7" 
+      "c8 c9 c9" 
    ;
 
    gap: 5px;
    justify-content: center;
    justify-items: center;
-   border: 1px solid #44475a;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-auto-rows: 280px;
 }
 
 .projeto {
@@ -218,14 +222,16 @@ header {
    flex-direction: column;
    justify-content: space-around;
    align-items: center;
-
    cursor: pointer;
-   border: 1px solid #AAA;
+   border: 3px solid #AAA;
    position: relative;
+   width: 100%;
+   height: 100%;
+   transition: .7s ease;
 }
 
 .projeto:hover {
-   border: 1px solid #00d235;
+   border: 3px solid #00d235;
 }
 
 .projeto img {
@@ -235,6 +241,7 @@ header {
    background-repeat: no-repeat;
    background-size: cover;
    transition: .7s ease;
+   background-image: url('../imgs/building.svg');
 }
 
 .projeto img:hover {
@@ -329,7 +336,6 @@ header .menu {
    .box-btn-progresso {
       width: 30%;
    }
-
 }
 
 @media screen and (min-width: 768px) {
