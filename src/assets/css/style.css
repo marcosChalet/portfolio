@@ -214,7 +214,7 @@ header {
    justify-content: center;
    justify-items: center;
    grid-template-columns: 1fr 1fr 1fr;
-   grid-auto-rows: 280px;
+   grid-auto-rows: 140px;
 }
 
 .projeto {
@@ -335,6 +335,9 @@ header .menu {
    }
    .box-btn-progresso {
       width: 30%;
+   }
+   .grid-projetos {
+      grid-auto-rows: 280px;
    }
 }
 
