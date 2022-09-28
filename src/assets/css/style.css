@@ -239,6 +239,10 @@ header {
    filter: brightness(15%);
 }
 
+.proj1 img {
+   background-image: url('../imgs/logic_calc.png');
+}
+
 .projeto h4 {
    position: absolute;
    bottom: 20px;
