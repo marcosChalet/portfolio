@@ -305,7 +305,6 @@ header .menu {
    display: none;
 }
 
-
 @media screen and (min-width: 576px) {
    .container {
       max-width: 540px;
@@ -324,12 +323,6 @@ header .menu {
    form {
       padding: 1em 0 0 0;
    }
-   .box-btn-progresso {
-      width: 30%;
-   }
-   .grid-projetos {
-      grid-auto-rows: 280px;
-   }
 }
 
 @media screen and (min-width: 768px) {
@@ -339,6 +332,12 @@ header .menu {
    input, textarea {
       width: 80%;
    }
+   .grid-projetos {
+      grid-template-rows: 220px 220px 240px 230px;
+   }
+   .box-btn-progresso {
+      width: 25%;
+   }
 }
 
 @media screen and (min-width: 992px) {
@@ -346,12 +345,11 @@ header .menu {
       max-width: 960px;
    }
    .box-btn-progresso {
-      width: 25%;
+      width: 40%;
    }
    .carreira {
       display: grid;
-      grid-template-columns: 55% 1fr;
-      grid-template-areas: "curriculo apresentacao";
+      grid-template-columns: 45% 1fr;
       column-gap: 50px;
    }
    .apresentacao {
@@ -360,11 +358,22 @@ header .menu {
    input, textarea {
       width: 70%;
    }
-
 }
+
 
 @media screen and (min-width: 1200px) {
    .container {
       max-width: 1140px;
+   }
+   .carreira {
+      display: grid;
+      grid-template-columns: 55% 1fr;
+      column-gap: 50px;
+   }
+   .box-btn-progresso {
+      width: 25%;
+   }
+   .grid-projetos {
+      grid-template-rows: 250px 250px 330px 260px;
    }
 }
