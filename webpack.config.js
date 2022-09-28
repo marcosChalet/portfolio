@@ -9,22 +9,22 @@ module.exports = {
    entry: "./src/script.js",
    output: {
       filename: "script.js",
-      path: __dirname + "/docs"
+      path: __dirname + "/docs",
    },
    devServer: {
       static: "./docs",
-      port: 8080
+      port: 8080,
    },
    optimization: {
       minimizer: [
          new CssMinimizerWebpackPlugin(),
-         new TerserWebpackPlugin()
-      ]
+         new TerserWebpackPlugin(),
+      ],
    },
    plugins: [
       new MiniCssExtractPlugin({
-         filename: "style.css"
-      })
+         filename: "style.css",
+      }),
    ],
    module: {
       rules: [
@@ -32,13 +32,10 @@ module.exports = {
             test: /\.css$/,
             use: [
                MiniCssExtractPlugin.loader,
-               'css-loader'
-            ]
-         }, {
-            test: /\.(png|jpg|gif)$/i,
-            loader: 'file-loader'
-         }
-      ]
-   }
+               'css-loader',
+            ],
+         },
+      ],
+   },
 }
 
