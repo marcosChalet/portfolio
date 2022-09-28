@@ -243,6 +243,10 @@ header {
    background-image: url('../imgs/logic_calc.png');
 }
 
+.proj2 img {
+   background-image: url('../imgs/parallax_test.png');
+}
+
 .projeto h4 {
    position: absolute;
    bottom: 20px;
