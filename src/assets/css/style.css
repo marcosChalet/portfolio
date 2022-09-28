@@ -190,31 +190,22 @@ header {
 .proj6 {
    grid-area: c6;
 }
-.proj7 {
-   grid-area: c7;
-}
-.proj8 {
-   grid-area: c8;
-}
-.proj9 {
-   grid-area: c9;
-}
 
 .grid-projetos {
    display: grid;
 
    grid-template-areas: 
-      "c1 c2 c3" 
-      "c1 c4 c5" 
-      "c6 c6 c7" 
-      "c8 c9 c9" 
+      "c1 c2" 
+      "c1 c3" 
+      "c4 c4" 
+      "c5 c6" 
    ;
 
    gap: 5px;
    justify-content: center;
    justify-items: center;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-auto-rows: 140px;
+   grid-template-columns: .8fr 1.2fr;
+   grid-template-rows: 130px 130px 200px 250px;
 }
 
 .projeto {
