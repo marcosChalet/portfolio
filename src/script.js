@@ -5,18 +5,21 @@ const camposDescricao = document.querySelectorAll('.descricao')
 
 let carreiraSelecionada = 0
 const qtdCarreiras = botoes.length - 1
+let time
 
 // Mover ao clicar
 botoes.forEach((botao, indice) => {
    botao.addEventListener('click', () => {
+      clearTimeout(time)
       mover(indice)
+      time = setTimeout(() => apresentacaoAuto(), 4000)
    })
 })
 
 // Mover automaticamente
 function apresentacaoAuto() {
    mover(carreiraSelecionada)
-   setTimeout(() => apresentacaoAuto(), 4000)
+   time = setTimeout(() => apresentacaoAuto(), 4000)
 }
 apresentacaoAuto()
 
