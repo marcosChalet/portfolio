@@ -1,0 +1,21 @@
+// Transforma pixel para rem
+@function toRem($px, $base: 16) {
+  @return math.div($px, $base) + rem;
+}
+
+@function set-text-color($color, $isDark: false) {
+  @if lightness($color) > 60 {
+    @return $color_dark_text;
+  }
+  @else if $isDark {
+    @return $color_dark_text;
+  }
+  @else {
+    @return $color_light_text;
+  }
+}
+
+@function clr($base, $shade: base) {
+  $color: map-get(map-get($colors, $base), $shade);
+  @return $color;
+}

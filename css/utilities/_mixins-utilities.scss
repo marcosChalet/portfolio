@@ -1,0 +1,11 @@
+@mixin bg-velop() {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: $bg-color;
+  opacity: .15;
+  background-image:  linear-gradient(#84B4 .8px, transparent .6px), linear-gradient(to right, #8AE7 .1px, darken($bg-color, 60) .6px);
+  background-size: 20px 20px;
+}
+

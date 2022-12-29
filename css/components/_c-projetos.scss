@@ -1,0 +1,85 @@
+.c-projetos {
+  @include container(470px);
+  min-height: 100vh;
+  padding-top: 7rem;
+  display: grid;
+  grid-template-areas: 
+  "projeto1"
+  "projeto2" 
+  "projeto3" 
+  "projeto4" 
+  "projeto5"
+  "projeto6"
+  ;
+
+  gap: 5px;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 150px);
+  
+
+  #projeto1 { grid-area: projeto1; }
+  #projeto2 { grid-area: projeto2; }
+  #projeto3 { grid-area: projeto3; }
+  #projeto4 { grid-area: projeto4; }
+  #projeto5 { grid-area: projeto5; }
+  #projeto6 { grid-area: projeto6; }
+
+  &__projeto {
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    position: relative;
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 5px 20px 0 rgba( 155, 155, 155, .1 );
+    background-color: $bg-color;
+
+    &:hover {
+      border: 1px solid rgba( 255, 255, 255, 0.5 );
+      cursor: pointer;
+      width: 102%;
+      height: 102%;
+      z-index: 2;
+      &> img {
+        filter: brightness(40%);
+      }
+    }
+
+    img {
+      @include bg-image();
+      width: 100%;
+      height: 100%;
+      transition: .7s ease;
+    }
+
+    h4 {
+      position: absolute;
+      bottom: 20px;
+      color: $color_light_gray;
+      word-wrap: anywhere;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 880px) {
+    @include container(880px);
+
+    min-height: 100vh;
+    padding-top: 7rem;
+    display: grid;
+    grid-template-areas: 
+    "projeto1 projeto2" 
+    "projeto1 projeto3" 
+    "projeto5 projeto4" 
+    "projeto5 projeto6" 
+    ;
+    grid-template-columns: .8fr 1.2fr;
+    grid-template-rows: 250px 260px 300px 260px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include container();
+  }
+}

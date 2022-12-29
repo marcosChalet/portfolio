@@ -1,0 +1,21 @@
+// coloca posição absoluta em container
+@mixin abs-fill() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+// coloca imagem (se houver) e deixa como size cover
+@mixin bg-image($url: null) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  @if $url {
+    background-image: url($url);
+  }
+}
+

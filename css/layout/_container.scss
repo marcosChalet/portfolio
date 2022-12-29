@@ -1,0 +1,6 @@
+// container centralizado
+@mixin container($size: 1140) {
+  position: relative;
+  width: min(90%, $size);
+  margin: auto;
+}
