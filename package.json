@@ -1,27 +1,16 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Portfólio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "webpack serve",
-    "devMin": "webpack",
-    "build": "cross-env NODE_ENV=production webpack"
+    "watch-scss": "sass --watch css/style.scss css/style.css --style compressed",
+    "dev-all": "npm run dev & npm run watch-scss",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^4.0.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "style-loader": "^3.3.1",
-    "terser-webpack-plugin": "^5.3.5",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.10.0"
+    "vite": "^4.0.0"
   }
 }
