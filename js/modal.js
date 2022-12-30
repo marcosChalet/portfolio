@@ -15,14 +15,14 @@ const contentProjects = [
     link: "https://marcoschalet.github.io/parallax-effect/"
   },{
     id: "projeto3",
-    title: "Páginas de Exercícios",
-    body: "Com a necessidade de exercitar React, fiz esse projeto para armazenar os exercícios e projetos pequenos - que não têm tanta relevância para um projeto sozinho no github - que estou desenvolvendo enquanto pratico.",
-    link: "https://marcoschalet.github.io/my-react-exercises-page/"
-  },{
-    id: "projeto4",
     title: "To-Do List",
     body: "Esse projeto foi desenvolvido para o teinamento de Sass com algo mais abrangente que apenas exercícios.",
     link: "https://marcoschalet.github.io/todo-list/"
+  },{
+    id: "projeto4",
+    title: "Página de Exercícios",
+    body: "Com a necessidade de exercitar React, fiz esse projeto para armazenar os exercícios e projetos pequenos - que não têm tanta relevância para um projeto sozinho no github - que estou desenvolvendo enquanto pratico.",
+    link: "https://marcoschalet.github.io/my-react-exercises-page/"
   },{
     id: "projeto5",
     title: "Futuramente",
