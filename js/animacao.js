@@ -3,9 +3,14 @@ const curriculo = document.querySelector('section.js-curriculo')
 const header = document.querySelector('header.js-header')
 let heroAnimando = true
 let headerTheme = false
-
+let idAnimacao
 
 window.addEventListener("scroll", function() {
+  clearTimeout(idAnimacao)
+  idAnimacao = setTimeout(animar, 10);
+})
+
+function animar() {
   const sy = this.scrollY
 
   if (sy > 230 && !headerTheme) {
@@ -26,4 +31,5 @@ window.addEventListener("scroll", function() {
     hero.classList.remove('c-home--animate')
     heroAnimando = false
   }
-})
+
+}
