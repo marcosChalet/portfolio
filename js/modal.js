@@ -25,9 +25,9 @@ const contentProjects = [
     link: "https://marcoschalet.github.io/my-react-exercises-page/"
   },{
     id: "projeto5",
-    title: "Futuramente",
-    body: "",
-    link: "#"
+    title: "Jogo da Velha",
+    body: "Jogo da Velha feito com intuito de melhorar e treinar o desenvolvimento com React.",
+    link: "https://jogo-da-velha-sage-one.vercel.app/"
   },{
     id: "projeto6",
     title: "Futuramente",
