@@ -10,7 +10,7 @@ const contentProjects = [
     link: "https://marcoschalet.github.io/logic-calculator/"
   },{
     id: "projeto2",
-    title: "Parallax Effect",
+    title: "MoviesLib",
     body: "Fiz essa página para treinar conceitos básicos de React.js.",
     link: "https://tmdb-react-three.vercel.app/"
   },{
@@ -30,9 +30,9 @@ const contentProjects = [
     link: "https://jogo-da-velha-sage-one.vercel.app/"
   },{
     id: "projeto6",
-    title: "Futuramente",
-    body: "",
-    link: "#"
+    title: "Jogo da Memória",
+    body: "Jogo da Memória feito com intuito de melhorar e treinar o desenvolvimento com React.",
+    link: "https://memory-game-seven-rho.vercel.app/"
   }
 ]
 
