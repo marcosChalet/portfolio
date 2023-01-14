@@ -11,8 +11,8 @@ const contentProjects = [
   },{
     id: "projeto2",
     title: "Parallax Effect",
-    body: "Fiz essa página para treinar conceitos básicos de css e javascript.",
-    link: "https://marcoschalet.github.io/parallax-effect/"
+    body: "Fiz essa página para treinar conceitos básicos de React.js.",
+    link: "https://tmdb-react-three.vercel.app/"
   },{
     id: "projeto3",
     title: "To-Do List",
