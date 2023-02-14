@@ -1,35 +1,15 @@
-const hero =  document.querySelector('section.js-show--effect')
-const curriculo = document.querySelector('section.js-curriculo')
-const header = document.querySelector('header.js-header')
-let heroAnimando = true
-let headerTheme = false
-let idAnimacao
+const hero = document.querySelector('section.js-show--effect')
+const form = document.querySelector('section.js-form')
 
-window.addEventListener("scroll", function() {
-  clearTimeout(idAnimacao)
-  idAnimacao = setTimeout(animar, 10);
+const heroObserver = new IntersectionObserver(() => {
+  hero.classList.toggle('c-home--animate')
 })
 
-function animar() {
-  const sy = this.scrollY
+const headerObserver = new IntersectionObserver(() => {
+  form.classList.toggle('c-header--theme')
+})
 
-  if (sy > 230 && !headerTheme) {
-    header.classList.add('c-header--theme')
-    headerTheme = true
-  } 
-  else if (sy < 220 && headerTheme) { 
-    header.classList.remove('c-header--theme')
-    headerTheme = false
-  }
-
-  if (sy < 560 && !heroAnimando) {
-    hero.classList.add('c-home--animate')
-    heroAnimando = true
-  }
-
-  if (sy > 400+curriculo.scrollHeight && heroAnimando) {
-    hero.classList.remove('c-home--animate')
-    heroAnimando = false
-  }
-
-}
+window.addEventListener("load", () => {
+  heroObserver.observe(form)
+  headerObserver.observe(hero)
+}, false)
