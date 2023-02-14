@@ -1,12 +1,13 @@
 const hero = document.querySelector('section.js-show--effect')
 const form = document.querySelector('section.js-form')
+const header = document.querySelector('header.js-header')
 
 const heroObserver = new IntersectionObserver(() => {
   hero.classList.toggle('c-home--animate')
 })
 
 const headerObserver = new IntersectionObserver(() => {
-  form.classList.toggle('c-header--theme')
+  header.classList.toggle('c-header--theme')
 })
 
 window.addEventListener("load", () => {
