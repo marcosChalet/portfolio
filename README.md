@@ -11,19 +11,12 @@
 <br>
 
 ## Tecnologias
-> Javascript
+> TypeScript
 >
-> HTML
+> Next
 >
-> <details>
-> <summary>SASS</summary>
-> Estou utilizando BEM, Namespaces e ITCSS junto com o SASS para que a estilização tenha uma maior consistencia e profissionalismo.
+> TailwindCSS
 >
-> &nbsp;
->
-> ***Vale ressaltar que ainda estou em fase de aprendizado nessas técnicas, por isso deve ter alguns equivocos no código. No entanto,
-> irei corrigindo com o passar do tempo e ganho de experiência.***
-> </details>
 
 <br>
 
@@ -34,7 +27,8 @@
 > git clone https://github.com/marcosChalet/portfolio.git
 > cd ./portfolio
 > npm install
-> npm run dev-all
+> npm run dev
 > ```
 >
 > Pronto... Agora é só abrir no browser e editar o código.
+>
