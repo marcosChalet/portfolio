@@ -39,7 +39,7 @@ export default function Projects() {
       sectionClass={`bg-[#121b32] justify-center`}
       articleClass="flex-wrap items-center justify-center pt-28 pb-40"
     >
-      <div className="glow-xl absolute top-48 left-60" />
+      <div className="glow md:glow-xl absolute left-10 top-64 md:left-60 md:top-48" />
       <div className="flex w-full items-center justify-center">
         <h1 className="absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-4xl font-bold text-transparent">
           PROJECTS
