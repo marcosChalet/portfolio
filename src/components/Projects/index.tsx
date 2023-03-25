@@ -1,6 +1,12 @@
+import { BarContext } from '@/context/BarContext';
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useContext, useEffect } from 'react';
 import Layout from '../ui/Layout';
 
-export default function Projects() {
+export default function Projects({
+  isVisible,
+  setSection,
+}: SectionVisibleType) {
   const projects = [
     {
       title: 'Next CRUD',
@@ -34,9 +40,15 @@ export default function Projects() {
     },
   ];
 
+  useEffect(() => {
+    if (isVisible) {
+      setSection(6);
+    }
+  }, [isVisible]);
+
   return (
     <Layout
-      sectionClass={`bg-[#121b32] justify-center`}
+      sectionClass={`bg-[#121b32] py-10`}
       articleClass="flex-wrap items-center justify-center pt-28 pb-40"
     >
       <div className="glow md:glow-xl absolute left-10 top-64 md:left-60 md:top-48" />

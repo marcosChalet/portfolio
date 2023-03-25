@@ -1,4 +1,11 @@
-export default function Hero() {
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
+
+export default function Hero({ isVisible, setSection }: SectionVisibleType) {
+  useEffect(() => {
+    if (isVisible) setSection(1);
+  }, [isVisible]);
+
   return (
     <section className="flex items-center justify-center bg-slate-900 py-36 text-slate-200 2xl:py-36">
       <h1 className="inline-block w-full max-w-sm flex-col text-center text-3xl font-bold leading-none md:max-w-4xl md:text-6xl xl:text-[5rem]">

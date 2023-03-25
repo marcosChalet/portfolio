@@ -1,6 +1,11 @@
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
 import Layout from '../ui/Layout';
 
-export default function Learning() {
+export default function Learning({
+  isVisible,
+  setSection,
+}: SectionVisibleType) {
   const skills = [
     {
       language: 'Native',
@@ -18,6 +23,10 @@ export default function Learning() {
       iconPath: '/imgs/nodejs-logo.svg',
     },
   ];
+
+  useEffect(() => {
+    if (isVisible) setSection(4);
+  }, [isVisible]);
 
   return (
     <Layout

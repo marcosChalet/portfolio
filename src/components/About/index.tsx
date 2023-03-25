@@ -1,6 +1,12 @@
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
 import Layout from '../ui/Layout';
 
-export default function About() {
+export default function About({ isVisible, setSection }: SectionVisibleType) {
+  useEffect(() => {
+    if (isVisible) setSection(2);
+  }, [isVisible]);
+
   return (
     <Layout sectionClass="px-2 py-10 md:px-10 md:py-20 text-4xl bg-[#121b32] 2xl:py-40">
       <div className="glow-sm md:glow absolute right-16 top-5 md:top-20 md:right-32" />

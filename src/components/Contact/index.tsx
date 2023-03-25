@@ -1,6 +1,12 @@
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
 import Layout from '../ui/Layout';
 
-export default function Contact() {
+export default function Contact({ isVisible, setSection }: SectionVisibleType) {
+  useEffect(() => {
+    if (isVisible) setSection(7);
+  }, [isVisible]);
+
   return (
     <Layout
       sectionClass="bg-slate-900 justify-center"

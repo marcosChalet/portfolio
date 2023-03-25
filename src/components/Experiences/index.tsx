@@ -1,6 +1,15 @@
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
 import Layout from '../ui/Layout';
 
-export default function Experiences() {
+export default function Experiences({
+  isVisible,
+  setSection,
+}: SectionVisibleType) {
+  useEffect(() => {
+    if (isVisible) setSection(5);
+  }, [isVisible]);
+
   return (
     <Layout
       sectionClass="mt-1 bg-slate-900 px-5 sm:px-20"

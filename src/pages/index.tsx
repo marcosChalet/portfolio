@@ -7,21 +7,57 @@ import Learning from '@/components/Learning';
 import Projects from '@/components/Projects';
 import Ribons from '@/components/Ribons';
 import Skills from '@/components/Skills';
-import { useState } from 'react';
+import { BarContext } from '@/context/BarContext';
+import TrackVisibility from 'react-on-screen';
+import { useContext } from 'react';
 
 export default function Home() {
-  const [section, setSection] = useState(1);
+  const bar = useContext(BarContext);
 
   return (
     <main className="relative bg-slate-600">
-      <Ribons section={section} />
-      <Hero />
-      <About />
-      <Skills />
-      <Learning />
-      <Experiences />
-      <Projects />
-      <Contact />
+      <Ribons section={bar.section} />
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Hero isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <About isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Skills isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Learning isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Experiences isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility offset={500}>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Projects isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
+
+      <TrackVisibility>
+        {({ isVisible }: { isVisible: boolean }) => (
+          <Contact isVisible={isVisible} setSection={bar.setSection} />
+        )}
+      </TrackVisibility>
       <Footer />
     </main>
   );

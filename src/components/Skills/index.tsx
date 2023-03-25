@@ -1,4 +1,11 @@
-export default function Skills() {
+import { SectionVisibleType } from '@/core/SectionVisible.type';
+import { useEffect } from 'react';
+
+export default function Skills({ isVisible, setSection }: SectionVisibleType) {
+  useEffect(() => {
+    if (isVisible) setSection(3);
+  }, [isVisible]);
+
   const skills = [
     {
       language: 'React.Js',
