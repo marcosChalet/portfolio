@@ -15,7 +15,7 @@ export default function Home() {
   const bar = useContext(BarContext);
 
   return (
-    <main className="relative bg-slate-600">
+    <main className="relative bg-slate-600 scrollbar-hide">
       <Ribons section={bar.section} />
       <TrackVisibility>
         {({ isVisible }: { isVisible: boolean }) => (

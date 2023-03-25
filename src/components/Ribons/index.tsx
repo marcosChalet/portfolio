@@ -3,7 +3,7 @@ export default function Ribons({ section }: { section: number }) {
     <>
       <span className="absolute top-0 right-3 flex h-28 w-7 items-center justify-center rounded-b-sm bg-slate-800 font-bold italic tracking-wide text-slate-300 after:absolute after:-rotate-90 after:content-['Chalet\'s'] sm:right-10" />
 
-      <span className="fixed left-2 top-[40%] z-10 hidden flex-col items-center justify-center rounded-md bg-slate-800 sm:flex md:flex">
+      <span className="fixed right-2 top-[40%] z-10 hidden flex-col items-center justify-center rounded-md bg-slate-800 sm:flex md:flex">
         <div
           className={`m-2 h-3 w-3 rounded-full border-2 border-slate-400 xl:h-3.5 xl:w-3.5 ${
             section >= 1 ? 'bg-slate-400' : 'bg-transparent'
