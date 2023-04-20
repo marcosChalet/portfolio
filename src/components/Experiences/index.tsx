@@ -12,6 +12,7 @@ export default function Experiences({
 
   return (
     <Layout
+      id={'experiences'}
       sectionClass="mt-1 bg-slate-900 px-5 sm:px-20"
       articleClass="flex-wrap items-center justify-start py-28"
     >

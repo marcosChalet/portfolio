@@ -30,6 +30,7 @@ export default function Learning({
 
   return (
     <Layout
+      id={'learning'}
       sectionClass="mt-1 h-fit bg-slate-900"
       articleClass="w-full flex-wrap items-center justify-center py-28"
     >

@@ -7,7 +7,10 @@ export default function Hero({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <section className="flex items-center justify-center bg-slate-900 py-36 text-slate-200 2xl:py-36">
+    <section
+      id={'hero'}
+      className="flex items-center justify-center bg-slate-900 py-36 text-slate-200 2xl:py-36"
+    >
       <h1 className="inline-block w-full max-w-sm flex-col text-center text-3xl font-bold leading-none md:max-w-4xl md:text-6xl xl:text-[5rem]">
         Olá, Me Chamo{' '}
         <div className="inline-block bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">

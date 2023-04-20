@@ -8,7 +8,10 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <Layout sectionClass="px-2 py-10 md:px-10 md:py-20 text-4xl bg-[#121b32] 2xl:py-40">
+    <Layout
+      id={'about'}
+      sectionClass="px-2 py-10 md:px-10 md:py-20 text-4xl bg-[#121b32] 2xl:py-40"
+    >
       <div className="glow-sm md:glow absolute right-16 top-5 md:top-20 md:right-32" />
       <h1 className="absolute -top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
         ABOUT

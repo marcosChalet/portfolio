@@ -9,6 +9,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
 
   return (
     <Layout
+      id={'contact'}
       sectionClass="bg-slate-900 justify-center"
       articleClass="flex-wrap items-center justify-center py-28 w-full"
     >

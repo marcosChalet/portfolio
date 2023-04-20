@@ -48,6 +48,7 @@ export default function Projects({
 
   return (
     <Layout
+      id={'projects'}
       sectionClass={`bg-[#121b32] py-10`}
       articleClass="flex-wrap items-center justify-center pt-28 pb-40"
     >
