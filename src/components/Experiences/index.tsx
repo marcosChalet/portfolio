@@ -43,11 +43,20 @@ export default function Experiences({
         </li>
         <li className="relative mt-7 pl-10 pt-7">
           <span className="absolute left-5 top-0 font-bold text-slate-400">
-            Now
+            Apr 2023 to Now
+          </span>
+          <article>
+            <h2 className="font-semibold">Calang.io</h2>
+            <span>Desenvolvedor Web Front-End.</span>
+          </article>
+        </li>
+        <li className="relative mt-7 pl-10 pt-7">
+          <span className="absolute left-5 top-0 font-bold text-slate-400">
+            Next
           </span>
           <article>
             <h2 className="font-semibold">Sua Empresa Aqui</h2>
-            <span>...</span>
+            <span>Desenvolvedor Web.</span>
           </article>
         </li>
       </ul>
