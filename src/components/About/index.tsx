@@ -31,7 +31,7 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
           </span>
         </div>
       </div>
-      <div className="hidden animate-float items-center sm:flex">
+      <div className="absolute right-5 hidden animate-float items-center sm:flex">
         <img
           className="h-36 w-64 xl:h-40 xl:w-72"
           src="/imgs/computer.svg"

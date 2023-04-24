@@ -49,10 +49,10 @@ export default function Projects({
   return (
     <Layout
       id={'projects'}
-      sectionClass={`bg-[#121b32] py-10`}
-      articleClass="flex-wrap items-center justify-center pt-28 pb-40"
+      sectionClass={`bg-[#121b32] py-10 justify-center`}
+      articleClass="flex-wrap items-center justify-center pt-28 pb-40 max-w-7xl"
     >
-      <div className="glow md:glow-xl absolute left-10 top-64 md:left-60 md:top-48" />
+      <div className="glow md:glow-xl absolute left-10 top-64 max-w-7xl md:left-60 md:top-48" />
       <div className="flex w-full items-center justify-center">
         <h1 className="absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-4xl font-bold text-transparent">
           PROJECTS
