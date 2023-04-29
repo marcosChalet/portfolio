@@ -1,8 +1,40 @@
 import { SectionVisibleType } from '@/core/SectionVisible.type';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
 import Layout from '../ui/Layout';
 
+const sendMessageSchema = z.object({
+  name: z.string().nonempty('nome obrigatório!'),
+  email: z.string().nonempty('email obrigatório!').email('formato inválido!'),
+  message: z.string().nonempty('mensagem obrigatória!'),
+});
+
+type sendMessageType = z.infer<typeof sendMessageSchema>;
+
 export default function Contact({ isVisible, setSection }: SectionVisibleType) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<sendMessageType>({
+    resolver: zodResolver(sendMessageSchema),
+  });
+
+  function sendMessage(data: any) {
+    fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+    });
+    window.location.reload();
+  }
+
   useEffect(() => {
     if (isVisible) setSection(7);
   }, [isVisible]);
@@ -23,42 +55,53 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
         autoComplete="off"
         action="https://api.staticforms.xyz/submit"
         method="post"
+        onSubmit={handleSubmit(sendMessage)}
         className="flex w-[60%] min-w-[12rem] flex-col text-slate-300 md:w-[33rem]"
       >
-        <input
-          type="hidden"
-          name="accessKey"
-          value="5668099e-a183-46a8-bc2c-d5c187855146"
-        />
-        <input
-          type="hidden"
-          name="redirectTo"
-          value="https://portfolio.mchalet.xyz/"
-        />
+        <div className="my-5">
+          {errors.name && (
+            <span className="font-bold uppercase text-red-600">
+              {errors.name.message}
+            </span>
+          )}
+          <input
+            type="text"
+            {...register('name')}
+            placeholder="Nome"
+            className="mt-1 w-full rounded-sm bg-slate-700 py-3 px-2"
+          />
+        </div>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Nome"
-          className="my-5 w-full rounded-sm bg-slate-700 py-3 px-2"
-        />
+        <div>
+          {errors.email && (
+            <span className="font-bold uppercase text-red-600">
+              {errors.email.message}
+            </span>
+          )}
+          <input
+            type="email"
+            {...register('email')}
+            placeholder="E-mail"
+            className="mt-1 w-full rounded-sm bg-slate-700 py-3 px-2"
+          />
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="E-mail"
-          className="w-full rounded-sm bg-slate-700 py-3 px-2"
-        />
-
-        <textarea
-          rows={5}
-          name="message"
-          placeholder="Mensagem"
-          className="my-5 w-full resize-none rounded-sm bg-slate-700 py-3 px-2"
-        />
+        <div className="my-5">
+          {errors.message && (
+            <span className="font-bold uppercase text-red-600">
+              {errors.message.message}
+            </span>
+          )}
+          <textarea
+            rows={5}
+            {...register('message')}
+            placeholder="Mensagem"
+            className="mt-1 w-full resize-none rounded-sm bg-slate-700 py-3 px-2"
+          />
+        </div>
 
         <button
-          className="w-full rounded-md bg-slate-800 py-3 text-xl font-bold text-slate-400"
+          className="w-full rounded-md bg-slate-800 py-3 text-xl font-bold text-slate-400 transition-all duration-500 hover:bg-slate-700"
           type="submit"
         >
           ENVIAR
