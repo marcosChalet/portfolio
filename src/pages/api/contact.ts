@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default function (req: any, res: any) {
 
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
@@ -170,7 +170,7 @@ export default function (req, res) {
       </body>
     </html>`
   }
-  transporter.sendMail(mailData, function (err, info) {
+  transporter.sendMail(mailData, function (err: any, info: any) {
     if(err)
       console.log(err)
     else
