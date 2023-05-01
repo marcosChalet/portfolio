@@ -86,7 +86,7 @@ export default function Projects({
             className="m-2 overflow-hidden rounded-sm bg-slate-800 font-bold text-slate-400 shadow-2xl shadow-slate-900 hover:cursor-pointer"
           >
             <div className="group relative flex h-[120px] w-[250px] flex-col justify-end lg:h-[250px] lg:w-[380px]">
-              <div className="absolute flex h-[75%] w-full flex-col items-center justify-center bg-slate-800 p-4 opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100">
+              <div className="absolute flex h-[75%] w-full flex-col items-center justify-center rounded-t-md bg-slate-800 p-4 opacity-0 transition-opacity duration-500 ease-in after:absolute after:-top-[35%] after:h-[35%] after:w-full after:bg-black after:opacity-40 after:content-[''] group-hover:opacity-100">
                 <p>{project.description}</p>
                 <div>
                   <a
