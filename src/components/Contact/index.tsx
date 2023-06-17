@@ -79,7 +79,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
                 afterSignUpUrl="/#contact"
                 children={
                   <img
-                    src="/imgs/arrow.svg"
+                    src="/imgs/google.svg"
                     className="w-12 animate-pulse bg-slate-100 p-3 hover:cursor-pointer"
                   />
                 }
