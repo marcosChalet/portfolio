@@ -8,7 +8,7 @@ import { z } from 'zod';
 import Layout from '../ui/Layout';
 
 const sendMessageSchema = z.object({
-  email: z.string(),
+  email: z.string().nonempty('email obrigatório!').email('formato inválido!'),
   name: z.string().nonempty('nome obrigatório!'),
   message: z.string().nonempty('mensagem obrigatória!'),
 });
@@ -64,11 +64,11 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
           <div className="flex justify-between bg-slate-800">
             <input
               readOnly
-              type="email"
-              {...register('email')}
-              value={
+              defaultValue={
                 user.isSignedIn ? user.user?.emailAddresses[0].emailAddress : ''
               }
+              type="email"
+              {...register('email')}
               placeholder="E-mail"
               className="h-12 w-full cursor-not-allowed rounded-sm border-r-2 border-slate-700 bg-inherit px-2 outline-none"
             />
