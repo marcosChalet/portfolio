@@ -1,5 +1,5 @@
 export default function (req: any, res: any) {
-
+  console.log(req.body)
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
     service: "gmail",

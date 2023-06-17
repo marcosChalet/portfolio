@@ -1,20 +1,23 @@
 import { SectionVisibleType } from '@/core/SectionVisible.type';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs';
 import { z } from 'zod';
 
 import Layout from '../ui/Layout';
 
 const sendMessageSchema = z.object({
-  name: z.string().nonempty('nome obrigatório!'),
   email: z.string().nonempty('email obrigatório!').email('formato inválido!'),
+  name: z.string().nonempty('nome obrigatório!'),
   message: z.string().nonempty('mensagem obrigatória!'),
 });
 
 type sendMessageType = z.infer<typeof sendMessageSchema>;
 
 export default function Contact({ isVisible, setSection }: SectionVisibleType) {
+  const user = useUser();
+
   const {
     register,
     handleSubmit,
@@ -53,11 +56,48 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
 
       <form
         autoComplete="off"
-        action="https://api.staticforms.xyz/submit"
         method="post"
         onSubmit={handleSubmit(sendMessage)}
         className="flex w-[60%] min-w-[12rem] flex-col text-slate-300 md:w-[33rem]"
       >
+        <div>
+          <div className="flex justify-between bg-slate-800">
+            <input
+              readOnly
+              defaultValue={
+                user.isSignedIn ? user.user?.emailAddresses[0].emailAddress : ''
+              }
+              type="email"
+              {...register('email')}
+              placeholder="E-mail"
+              className="h-12 w-full cursor-not-allowed rounded-sm border-r-2 border-slate-700 bg-inherit px-2 outline-none"
+            />
+
+            {!user.isSignedIn ? (
+              <SignInButton
+                afterSignInUrl="/#contact"
+                afterSignUpUrl="/#contact"
+                children={
+                  <img
+                    src="/imgs/arrow.svg"
+                    className="w-12 animate-pulse bg-violet-700 p-3 hover:cursor-pointer"
+                  />
+                }
+                mode="modal"
+              />
+            ) : (
+              <SignOutButton
+                children={
+                  <img
+                    src="/imgs/exit.svg"
+                    className="w-12 bg-violet-900 p-3 hover:cursor-pointer"
+                  />
+                }
+              />
+            )}
+          </div>
+        </div>
+
         <div className="my-5">
           {errors.name && (
             <span className="font-bold uppercase text-red-600">
@@ -65,47 +105,44 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
             </span>
           )}
           <input
+            disabled={!user.isSignedIn}
             type="text"
             {...register('name')}
             placeholder="Nome"
-            className="mt-1 w-full rounded-sm bg-slate-700 py-3 px-2"
+            className={`mt-1 w-full rounded-sm bg-slate-700 py-3 px-2 outline-none ${
+              !user.isSignedIn && 'cursor-not-allowed bg-slate-800'
+            }`}
           />
         </div>
 
-        <div>
-          {errors.email && (
-            <span className="font-bold uppercase text-red-600">
-              {errors.email.message}
-            </span>
-          )}
-          <input
-            type="email"
-            {...register('email')}
-            placeholder="E-mail"
-            className="mt-1 w-full rounded-sm bg-slate-700 py-3 px-2"
-          />
-        </div>
-
-        <div className="my-5">
+        <div className="mb-5">
           {errors.message && (
             <span className="font-bold uppercase text-red-600">
               {errors.message.message}
             </span>
           )}
           <textarea
+            disabled={!user.isSignedIn}
             rows={5}
             {...register('message')}
             placeholder="Mensagem"
-            className="mt-1 w-full resize-none rounded-sm bg-slate-700 py-3 px-2"
+            className={`mt-1 w-full resize-none rounded-sm bg-slate-700 py-3 px-2 outline-none ${
+              !user.isSignedIn && 'cursor-not-allowed bg-slate-800'
+            }`}
           />
         </div>
 
         <button
-          className="w-full rounded-md bg-slate-800 py-3 text-xl font-bold text-slate-400 transition-all duration-500 hover:bg-slate-700"
+          disabled={!user.isSignedIn}
+          className={`w-full rounded-md bg-slate-800 py-3 text-xl font-bold text-slate-400 transition-all duration-500 hover:bg-slate-700 ${
+            !user.isSignedIn &&
+            'cursor-not-allowed bg-slate-800 hover:bg-slate-800'
+          }`}
           type="submit"
         >
           ENVIAR
         </button>
+        {<div>{}</div>}
       </form>
     </Layout>
   );
