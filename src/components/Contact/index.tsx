@@ -58,7 +58,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
         autoComplete="off"
         method="post"
         onSubmit={handleSubmit(sendMessage)}
-        className="flex w-[60%] min-w-[12rem] flex-col text-slate-300 md:w-[33rem]"
+        className="flex w-[60%] min-w-[17rem] flex-col text-slate-300 md:w-[33rem]"
       >
         <div>
           <div className="flex justify-between bg-slate-800">
