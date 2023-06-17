@@ -80,7 +80,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
                 children={
                   <img
                     src="/imgs/arrow.svg"
-                    className="w-12 animate-pulse bg-violet-700 p-3 hover:cursor-pointer"
+                    className="w-12 animate-pulse bg-slate-100 p-3 hover:cursor-pointer"
                   />
                 }
                 mode="modal"
@@ -89,7 +89,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
               <SignOutButton
                 children={
                   <img
-                    src="/imgs/exit.svg"
+                    src="/imgs/google.svg"
                     className="w-12 bg-violet-900 p-3 hover:cursor-pointer"
                   />
                 }
