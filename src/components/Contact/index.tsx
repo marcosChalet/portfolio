@@ -89,7 +89,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
               <SignOutButton
                 children={
                   <img
-                    src="/imgs/google.svg"
+                    src="/imgs/exit.svg"
                     className="w-12 bg-violet-900 p-3 hover:cursor-pointer"
                   />
                 }
