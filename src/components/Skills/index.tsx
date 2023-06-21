@@ -8,6 +8,11 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
 
   const skills = [
     {
+      language: 'R.Native',
+      alt: 'React.Js logo',
+      icnPath: '/imgs/native-logo.svg',
+    },
+    {
       language: 'React.Js',
       alt: 'React.Js logo',
       icnPath: '/imgs/react-logo.svg',
@@ -35,6 +40,11 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
       icnPath: '/imgs/tailwind-logo.svg',
     },
     { language: 'SCSS/SASS', alt: 'SASS logo', icnPath: '/imgs/sass-logo.svg' },
+    {
+      language: 'Node',
+      alt: 'Node logo',
+      icnPath: '/imgs/nodejs-logo.svg',
+    },
     { language: 'Java', alt: 'Java logo', icnPath: '/imgs/java-logo.svg' },
     { language: 'C/C++', alt: 'C language logo', icnPath: '/imgs/c-logo.svg' },
     { language: 'MySQL', alt: 'MySQL logo', icnPath: '/imgs/mysql-logo.svg' },
