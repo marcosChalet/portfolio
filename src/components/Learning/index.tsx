@@ -8,19 +8,14 @@ export default function Learning({
 }: SectionVisibleType) {
   const skills = [
     {
-      language: 'Native',
-      alt: 'React Native logo',
-      iconPath: '/imgs/native-logo.svg',
+      language: 'Docker',
+      alt: 'Docker logo',
+      iconPath: '/imgs/docker-logo.svg',
     },
     {
-      language: 'MongoDB',
-      alt: 'MongoDB logo',
-      iconPath: '/imgs/mongodb-logo.svg',
-    },
-    {
-      language: 'Node',
-      alt: 'Nodejs logo',
-      iconPath: '/imgs/nodejs-logo.svg',
+      language: 'Spring',
+      alt: 'Spring logo',
+      iconPath: '/imgs/spring-logo.svg',
     },
   ];
 
