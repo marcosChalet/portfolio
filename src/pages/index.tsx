@@ -40,7 +40,7 @@ export default function Home() {
           )}
         </TrackVisibility>
 
-        <TrackVisibility>
+        <TrackVisibility offset={100}>
           {({ isVisible }: { isVisible: boolean }) => (
             <Skills isVisible={isVisible} setSection={bar.setSection} />
           )}
@@ -58,7 +58,7 @@ export default function Home() {
           )}
         </TrackVisibility>
 
-        <TrackVisibility offset={500}>
+        <TrackVisibility offset={300}>
           {({ isVisible }: { isVisible: boolean }) => (
             <Projects isVisible={isVisible} setSection={bar.setSection} />
           )}
