@@ -143,7 +143,6 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
         >
           ENVIAR
         </button>
-        {<div>{}</div>}
       </form>
     </Layout>
   );
