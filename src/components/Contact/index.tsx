@@ -27,14 +27,15 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
   });
 
   function sendMessage(data: any) {
-    fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
-      },
-    });
+    user.isSignedIn &&
+      fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+      });
     window.location.reload();
   }
 
