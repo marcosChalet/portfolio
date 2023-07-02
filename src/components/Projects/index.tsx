@@ -82,7 +82,7 @@ export default function Projects({
         </h1>
       </div>
 
-      <div className="rows-[200px] max-w-4xl sm:grid sm:grid-cols-2 sm:grid-rows-[350px_250px_300px_250px]">
+      <div className="rows-[200px] max-w-4xl sm:grid sm:grid-cols-2 sm:grid-rows-[380px_250px_300px_250px]">
         {projects.map((project, idx) => {
           return (
             <div
