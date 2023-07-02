@@ -29,6 +29,15 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/memory-game',
   },
   {
+    title: 'Logic Calculator',
+    img: '/imgs/logicCalculator-project.png',
+    alt: 'imagem de uma calculadora de expressões lógicas',
+    description:
+      'Calculadora que processa uma expressão lógica e cria sua tabela verdade.',
+    productionLink: 'https://marcoschalet.github.io/logic-calculator/',
+    githubLink: 'https://github.com/marcosChalet/logic-calculator',
+  },
+  {
     title: 'Jogo da Velha',
     img: '/imgs/velha-project.png',
     alt: 'imagem de um tabuleiro de jogo da velha',
@@ -44,15 +53,6 @@ const projects = [
       'Blog pessoal para compartilhar meus conhecimentos e o conteúdo que venho estudando sobre desenvolvimento web.',
     productionLink: 'https://blog.mchalet.xyz/',
     githubLink: 'https://github.com/marcosChalet/chalet-blog',
-  },
-  {
-    title: 'Logic Calculator',
-    img: '/imgs/logicCalculator-project.png',
-    alt: 'imagem de uma calculadora de expressões lógicas',
-    description:
-      'Calculadora que processa uma expressão lógica e cria sua tabela verdade.',
-    productionLink: 'https://marcoschalet.github.io/logic-calculator/',
-    githubLink: 'https://github.com/marcosChalet/logic-calculator',
   },
 ];
 
@@ -74,51 +74,65 @@ export default function Projects({
     >
       <div className="glow md:glow-xl absolute left-10 top-64 max-w-7xl md:left-60 md:top-48" />
       <div className="flex w-full items-center justify-center">
-        <h1 className="absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-4xl font-bold text-transparent">
+        <h1
+          className={`absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500
+                        bg-clip-text text-4xl font-bold text-transparent`}
+        >
           PROJECTS
         </h1>
       </div>
 
-      {projects.map((project) => {
-        return (
-          <div
-            key={project.title}
-            className="m-2 overflow-hidden rounded-sm bg-slate-800 font-bold text-slate-400 shadow-2xl shadow-slate-900 hover:cursor-pointer"
-          >
-            <div className="group relative flex h-[120px] w-[250px] flex-col justify-end lg:h-[250px] lg:w-[380px]">
-              <div className="absolute flex h-[75%] w-full flex-col items-center justify-center rounded-t-md bg-slate-800 p-4 opacity-0 transition-opacity duration-500 ease-in after:absolute after:-top-[35%] after:h-[35%] after:w-full after:bg-black after:opacity-40 after:content-[''] group-hover:opacity-100">
-                <p>{project.description}</p>
-                <div>
-                  <a
-                    href={project.productionLink}
-                    target="_blank"
-                    className="mr-1 mt-5 inline-block w-32 rounded-md border-2 border-transparent bg-slate-900 p-2 text-center uppercase hover:border-slate-500"
-                  >
-                    Produção
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    className="ml-1 mt-5 inline-block w-32 rounded-md border-2 border-transparent bg-slate-900 p-2 text-center uppercase hover:border-slate-500"
-                  >
-                    Projeto
-                  </a>
+      <div className="rows-[200px] max-w-4xl sm:grid sm:grid-cols-2 sm:grid-rows-[450px_250px_300px_250px]">
+        {projects.map((project, idx) => {
+          return (
+            <div
+              key={project.title}
+              className={`m-2 overflow-hidden rounded-sm bg-slate-800 font-bold
+               text-slate-400 shadow-2xl shadow-slate-900 hover:cursor-pointer ${
+                 idx === 0 && 'col-span-2'
+               } ${idx === 4 && 'row-span-2'}`}
+            >
+              <div className="group relative flex h-full flex-col justify-center">
+                <div
+                  className={`absolute flex h-full w-full flex-col items-center justify-center gap-3
+                              rounded-t-md p-4 text-center opacity-0 backdrop-blur-xl transition-opacity
+                              duration-300 ease-in after:content-[''] group-hover:opacity-100`}
+                >
+                  <p className="text-sm sm:text-base">{project.description}</p>
+                  <div className="flex items-center justify-center gap-1">
+                    <a
+                      href={project.productionLink}
+                      target="_blank"
+                      className={`flex h-9 w-28 items-center justify-center rounded-md border-2
+                                  border-transparent bg-slate-900 text-sm uppercase
+                                hover:border-slate-500 sm:ml-1 sm:mt-5 sm:h-12 sm:w-32 sm:p-2`}
+                    >
+                      Produção
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      className={`flex h-9 w-28 items-center justify-center  rounded-md border-2
+                                  border-transparent bg-slate-900 text-sm uppercase
+                                hover:border-slate-500 sm:mt-5 sm:h-12 sm:w-32 sm:p-2`}
+                    >
+                      Projeto
+                    </a>
+                  </div>
                 </div>
+                <img
+                  src={project.img}
+                  alt={project.alt}
+                  className="h-full w-full object-cover"
+                />
+                <span className="absolute top-2 left-3 group-hover:opacity-0">
+                  {project.title}
+                </span>
               </div>
-              <img
-                src={project.img}
-                alt={project.alt}
-                className="h-full w-full object-cover"
-              />
-              <span className="absolute top-2 left-3">{project.title}</span>
             </div>
-          </div>
-        );
-      })}
-
-      {/*<button className="absolute bottom-12 cursor-not-allowed rounded-md bg-slate-800 px-16 py-5 text-xl font-bold text-slate-400">
-        MORE
-    </button>*/}
+          );
+        })}
+      </div>
     </Layout>
   );
 }
