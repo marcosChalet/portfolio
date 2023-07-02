@@ -1,7 +1,7 @@
-import { BarContext } from '@/context/BarContext';
 import { SectionVisibleType } from '@/core/SectionVisible.type';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import Layout from '../ui/Layout';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -120,7 +120,9 @@ export default function Projects({
                     </a>
                   </div>
                 </div>
-                <img
+                <Image
+                  width={1920}
+                  height={1080}
                   src={project.img}
                   alt={project.alt}
                   className="h-full w-full object-cover"
