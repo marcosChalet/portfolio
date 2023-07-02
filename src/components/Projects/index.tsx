@@ -21,12 +21,13 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/marvel-page',
   },
   {
-    title: 'Memory Game',
-    img: '/imgs/memory-project.png',
-    alt: 'imagem de um jogo da memória',
-    description: 'Jogo da memória desenvolvido com NextJs.',
-    productionLink: 'https://memory-game-seven-rho.vercel.app/',
-    githubLink: 'https://github.com/marcosChalet/memory-game',
+    title: 'Chalet blog',
+    img: '/imgs/blog-project.png',
+    alt: 'blog pessoal desenvolvido em Next.js',
+    description:
+      'Blog pessoal para compartilhar meus conhecimentos e o conteúdo que venho estudando sobre desenvolvimento web.',
+    productionLink: 'https://blog.mchalet.xyz/',
+    githubLink: 'https://github.com/marcosChalet/chalet-blog',
   },
   {
     title: 'Logic Calculator',
@@ -38,21 +39,20 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/logic-calculator',
   },
   {
+    title: 'Memory Game',
+    img: '/imgs/memory-project.png',
+    alt: 'imagem de um jogo da memória',
+    description: 'Jogo da memória desenvolvido com NextJs.',
+    productionLink: 'https://memory-game-seven-rho.vercel.app/',
+    githubLink: 'https://github.com/marcosChalet/memory-game',
+  },
+  {
     title: 'Jogo da Velha',
     img: '/imgs/velha-project.png',
     alt: 'imagem de um tabuleiro de jogo da velha',
     description: 'Jogo da velha desenvolvido com NextJs.',
     productionLink: 'https://jogo-da-velha-sage-one.vercel.app/',
     githubLink: 'https://github.com/marcosChalet/jogo-da-velha',
-  },
-  {
-    title: 'Chalet blog',
-    img: '/imgs/blog-project.png',
-    alt: 'blog pessoal desenvolvido em Next.js',
-    description:
-      'Blog pessoal para compartilhar meus conhecimentos e o conteúdo que venho estudando sobre desenvolvimento web.',
-    productionLink: 'https://blog.mchalet.xyz/',
-    githubLink: 'https://github.com/marcosChalet/chalet-blog',
   },
 ];
 
