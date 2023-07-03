@@ -98,7 +98,9 @@ export default function Projects({
                               rounded-t-md p-4 text-center opacity-0 backdrop-blur-xl transition-opacity
                               duration-300 ease-in after:content-[''] group-hover:opacity-100`}
                 >
-                  <p className="text-sm sm:text-base">{project.description}</p>
+                  <p className="-translate-y-16 text-sm duration-300 group-hover:translate-y-0 sm:text-base">
+                    {project.description}
+                  </p>
                   <div className="flex items-center justify-center gap-1">
                     <a
                       href={project.productionLink}
