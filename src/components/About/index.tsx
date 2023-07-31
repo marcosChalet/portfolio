@@ -2,6 +2,15 @@ import { SectionVisibleType } from '@/core/SectionVisible.type';
 import { useEffect } from 'react';
 import Layout from '../ui/Layout';
 
+import { Montserrat } from 'next/font/google';
+const montserrat = Montserrat({
+  display: 'block',
+  style: 'italic',
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
 export default function About({ isVisible, setSection }: SectionVisibleType) {
   useEffect(() => {
     if (isVisible) setSection(2);
@@ -18,7 +27,7 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
       </h1>
       <div className="relative mx-2 flex w-full px-5 py-1 text-left text-sm font-semibold sm:basis-3/4 sm:text-xl xl:text-2xl">
         <span className="absolute -ml-5 h-full w-1 rounded-sm bg-slate-600" />
-        <div>
+        <div className={montserrat.className}>
           <span>
             Estudante de Ciência da Computação em transição de Desenvolvedor Web
             Front End para o Full Stack.
