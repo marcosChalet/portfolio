@@ -1,19 +1,28 @@
 export default function (req: any, res: any) {
-  console.log(req.body)
-  let nodemailer = require('nodemailer')
+  const { email } = req.body;
+
+  if (req.method !== 'POST') {
+    return res.status(405).end();
+  }
+
+  if (!email) {
+    return res.status(400).json({ erro: 'O campo de e-mail é obrigatório' });
+  }
+
+  let nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: 'gmail',
     auth: {
       user: 'mchaletmail@gmail.com',
       pass: process.env.PASSWORD,
     },
     secure: true,
-  })
+  });
   const mailData = {
     from: 'mchaletmail@gmail.com',
     to: 'chaletmarcos@gmail.com',
     subject: `Message From ${req.body.name}`,
-    text: req.body.message + " | Sent from: " + req.body.email,
+    text: req.body.message + ' | Sent from: ' + req.body.email,
     html: `<!doctype html>
     <html>
       <head>
@@ -168,13 +177,11 @@ export default function (req: any, res: any) {
           </tr>
         </table>
       </body>
-    </html>`
-  }
+    </html>`,
+  };
   transporter.sendMail(mailData, function (err: any, info: any) {
-    if(err)
-      console.log(err)
-    else
-      console.log(info)
-  })
-  res.status(200)
+    if (err) console.log(err);
+    else console.log(info);
+  });
+  res.status(200);
 }
