@@ -8,14 +8,14 @@ export default function Learning({
 }: SectionVisibleType) {
   const skills = [
     {
-      language: 'Docker',
-      alt: 'Docker logo',
-      iconPath: '/imgs/docker-logo.svg',
+      language: 'Kubernetes',
+      alt: 'Kubernetes logo',
+      iconPath: '/imgs/k8s-logo.svg',
     },
     {
-      language: 'Spring',
-      alt: 'Spring logo',
-      iconPath: '/imgs/spring-logo.svg',
+      language: 'Nestjs',
+      alt: 'Nestjs logo',
+      iconPath: '/imgs/nestjs-logo.svg',
     },
   ];
 

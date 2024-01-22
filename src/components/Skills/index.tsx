@@ -8,19 +8,9 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
 
   const skills = [
     {
-      language: 'R.Native',
-      alt: 'React.Js logo',
-      icnPath: '/imgs/native-logo.svg',
-    },
-    {
       language: 'React.Js',
       alt: 'React.Js logo',
       icnPath: '/imgs/react-logo.svg',
-    },
-    {
-      language: 'Next.Js',
-      alt: 'Next.Js logo',
-      icnPath: '/imgs/next-logo.svg',
     },
     {
       language: 'JavaScript',
@@ -39,20 +29,12 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
       alt: 'TailwindCSS logo',
       icnPath: '/imgs/tailwind-logo.svg',
     },
-    { language: 'SCSS/SASS', alt: 'SASS logo', icnPath: '/imgs/sass-logo.svg' },
     {
       language: 'Node',
       alt: 'Node logo',
       icnPath: '/imgs/nodejs-logo.svg',
     },
     { language: 'Java', alt: 'Java logo', icnPath: '/imgs/java-logo.svg' },
-    { language: 'C/C++', alt: 'C language logo', icnPath: '/imgs/c-logo.svg' },
-    { language: 'MySQL', alt: 'MySQL logo', icnPath: '/imgs/mysql-logo.svg' },
-    {
-      language: 'Firebase',
-      alt: 'Firebase logo',
-      icnPath: '/imgs/firebase-logo.svg',
-    },
     {
       language: 'Git',
       alt: 'Git logo',
@@ -62,6 +44,16 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
       language: 'Linux',
       alt: 'Linux logo',
       icnPath: '/imgs/linux-logo.svg',
+    },
+    {
+      language: 'Docker',
+      alt: 'Docker logo',
+      icnPath: '/imgs/docker-logo.svg',
+    },
+    {
+      language: 'Spring',
+      alt: 'Spring logo',
+      icnPath: '/imgs/spring-logo.svg',
     },
   ];
 
