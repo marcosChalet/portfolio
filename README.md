@@ -6,22 +6,24 @@
 <br><br>
 
 ## Visite-me
-> *Veja em produção [aqui](https://portfolio.mchalet.xyz/)!*
+
+> _Veja em produção [aqui](https://www.mchalet.com.br/)!_
 
 <br>
 
 ## Tecnologias
+
 > TypeScript
 >
 > Next
 >
 > TailwindCSS
->
 
 <br>
 
 ## Testar
-> ***Quer ver o código mais de perto? Siga os passos a baixo...***
+
+> **_Quer ver o código mais de perto? Siga os passos a baixo..._**
 >
 > ```sh
 > git clone https://github.com/marcosChalet/portfolio.git
@@ -31,4 +33,3 @@
 > ```
 >
 > Pronto... Agora é só abrir no browser e editar o código.
->
