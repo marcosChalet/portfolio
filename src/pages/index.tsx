@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfólio</title>
+        <title>I mChalet</title>
         <meta
           name="description"
           content="Página pessoal para contato e exposição da minha experiência profissional."
