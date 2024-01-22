@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Ribons({ section }: { section: number }) {
   return (
     <>
-      <span className="absolute top-0 left-3 flex h-28 w-7 items-center justify-center rounded-b-sm bg-slate-800 font-bold italic tracking-wide text-slate-300 after:absolute after:-rotate-90 after:content-['Chalet\'s'] sm:right-10" />
+      <span className="absolute top-0 left-7 flex h-28 w-7 items-center justify-center rounded-b-sm bg-slate-800 font-bold italic tracking-wide text-slate-300 after:absolute after:-rotate-90 after:content-['Chalet\'s'] sm:right-10" />
 
       <span className="fixed right-2 top-[40%] z-10 hidden flex-col items-center justify-center rounded-md bg-slate-800 sm:flex md:flex">
         <Link
