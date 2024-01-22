@@ -71,7 +71,7 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
       className="relative flex h-fit items-center justify-center bg-slate-900"
     >
       <article className="flex flex-wrap items-center justify-center py-20 sm:px-12 sm:py-28 md:max-w-4xl lg:max-w-screen-xl xl:px-20">
-        <h1 className="absolute -top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
+        <h1 className="absolute top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
           MY SKILLS
         </h1>
 
