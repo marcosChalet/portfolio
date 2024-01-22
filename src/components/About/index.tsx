@@ -28,15 +28,13 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
       <div className="relative mx-2 flex w-full px-5 py-1 text-left text-sm font-semibold sm:basis-3/4 sm:text-xl xl:text-2xl">
         <span className="absolute -ml-5 h-full w-1 rounded-sm bg-slate-600" />
         <div className={montserrat.className}>
-          <span>
-            Estudante de Ciência da Computação em transição de Desenvolvedor Web
-            Front End para o Full Stack.
-          </span>
+          <span className="underline">Desenvolvedor Web Full Stack.</span>
           <span className="inline-block pt-5">
-            {' '}
-            Atualmente em busca de uma oportunidade para colorcar em prática os
-            meus conhecimentos adquiridos por meio de cursos online, em projetos
-            próprios e na faculdade.
+            Estudante de Ciência da Computação com experiência em
+            Desenvolvimento Web Full Stack. Apesar de já possuir experiência com
+            React.js, NestJs e TypeScript, também estou explorando as
+            possibilidades do desenvolvimento de software, especialmente por
+            meio dos estudos na área de DevOps.
           </span>
         </div>
       </div>
