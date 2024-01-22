@@ -30,6 +30,7 @@ export default function Experiences({
             <span>Iniciação Acadêmica em Computação Gráfica.</span>
           </article>
         </li>
+
         <li className="relative mt-7 pl-10 pt-7">
           <span className="absolute left-5 top-0 font-bold text-slate-400">
             Apr 2022 to Nov 2022
@@ -41,22 +42,34 @@ export default function Experiences({
             </span>
           </article>
         </li>
+
+        <li className="relative mt-7 pl-10 pt-7">
+          <span className="absolute left-5 top-0 font-bold text-slate-400">
+            Jul 2023 to Dec 2023
+          </span>
+          <article>
+            <h2 className="font-semibold">Universidade Federaal do Cariri</h2>
+            <span>Estágio em desenvolvimento web + DevOps.</span>
+          </article>
+        </li>
+
         <li className="relative mt-7 pl-10 pt-7">
           <span className="absolute left-5 top-0 font-bold text-slate-400">
             Apr 2023 to Now
           </span>
           <article>
             <h2 className="font-semibold">Calang.io</h2>
-            <span>Desenvolvedor Web Front-End.</span>
+            <span>Tabalho voluntário como desenvolvedor web front-end.</span>
           </article>
         </li>
+
         <li className="relative mt-7 pl-10 pt-7">
           <span className="absolute left-5 top-0 font-bold text-slate-400">
-            Next
+            Jan 2024 to Now
           </span>
           <article>
-            <h2 className="font-semibold">Sua Empresa Aqui</h2>
-            <span>Desenvolvedor Web.</span>
+            <h2 className="font-semibold">Compass UOL</h2>
+            <span>Estágio em desenvolvimento web full stack + AWS.</span>
           </article>
         </li>
       </ul>
