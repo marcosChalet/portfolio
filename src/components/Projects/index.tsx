@@ -78,7 +78,7 @@ export default function Projects({
           className={`absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500
                         bg-clip-text text-4xl font-bold text-transparent`}
         >
-          PROJECTS
+          PROJETOS
         </h1>
       </div>
 

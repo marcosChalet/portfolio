@@ -30,7 +30,7 @@ export default function Learning({
       articleClass="w-full flex-wrap items-center justify-center py-28"
     >
       <h1 className="absolute top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
-        LEARNING
+        ESTUDANDO
       </h1>
 
       {skills.map((item) => {

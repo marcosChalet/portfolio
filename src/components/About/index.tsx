@@ -23,7 +23,7 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
     >
       <div className="glow-sm md:glow absolute right-16 top-5 md:top-20 md:right-32" />
       <h1 className="absolute top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
-        ABOUT
+        SOBRE
       </h1>
       <div className="relative mx-2 flex w-full px-5 py-1 text-left text-sm font-semibold sm:basis-3/4 sm:text-xl xl:text-2xl">
         <span className="absolute -ml-5 h-full w-1 rounded-sm bg-slate-600" />

@@ -51,7 +51,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
     >
       <div className="flex w-full items-center justify-center">
         <h1 className="absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-4xl font-bold text-transparent">
-          CONTACT
+          CONTATO
         </h1>
       </div>
 
