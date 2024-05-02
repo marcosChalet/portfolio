@@ -1,3 +1,5 @@
+import Layout from '../ui/Layout';
+
 export default function Footer() {
   const socialMedia = [
     {
@@ -18,31 +20,43 @@ export default function Footer() {
       alt: 'Octocat logo',
       url: 'https://github.com/marcosChalet',
     },
+    {
+      title: '...',
+      img: '',
+      alt: '...',
+      url: '',
+    },
   ];
 
   return (
-    <footer className="relative mt-1 flex h-20 items-center justify-center bg-slate-900 text-slate-400">
-      <div className="absolute -top-5">
-        <div className="justify-cente flex w-full items-center justify-center bg-slate-900 px-3">
+    <Layout id={'footer'} articleClass="flex-col w-full">
+      <footer className="relative flex flex-col items-center justify-center text-slate-400">
+        <div className="grid w-full grid-cols-3 items-center justify-center sm:grid-cols-4">
           {socialMedia.map((media) => {
             return (
-              <div
+              <a
                 key={media.title}
-                className="m-2 h-[24px] w-[24px] overflow-hidden rounded-sm font-bold text-slate-400 hover:cursor-pointer"
+                href={media.url}
+                target="_blank"
+                className="flex h-44 items-center justify-center gap-1 border-[1px] border-r-0 border-l-0
+                border-white/10 text-sm font-medium duration-500 hover:bg-slate-600/10 sm:gap-4 sm:text-xl"
               >
-                <a href={media.url} target="_blank">
+                {media.img != '' && (
                   <img
                     src={media.img}
                     alt={media.alt}
-                    className="h-full w-full object-cover"
+                    className="h-4 w-4 object-cover sm:h-[24px] sm:w-[24px]"
                   />
-                </a>
-              </div>
+                )}
+                {media.title}
+              </a>
             );
           })}
         </div>
-      </div>
-      <span>Develop By Marcos Chalet</span>
-    </footer>
+        <span className="text-md mt-20 py-5 font-bold sm:text-xl">
+          Develop By Marcos Chalet
+        </span>
+      </footer>
+    </Layout>
   );
 }

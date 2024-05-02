@@ -44,25 +44,24 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <Layout
-      id={'contact'}
-      sectionClass="bg-slate-900 justify-center"
-      articleClass="flex-wrap items-center justify-center py-28 w-full"
-    >
-      <div className="flex w-full items-center justify-center">
-        <h1 className="absolute top-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-4xl font-bold text-transparent">
-          CONTATO
-        </h1>
-      </div>
+    <Layout id={'contact'} articleClass="flex-col w-full my-28 sm:my-52">
+      <h1
+        className={`-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl
+          font-bold text-transparent sm:ml-3 sm:text-4xl
+        `}
+      >
+        CONTATO
+      </h1>
 
       <form
         autoComplete="off"
         method="post"
         onSubmit={handleSubmit(sendMessage)}
-        className="flex w-[60%] min-w-[17rem] flex-col text-slate-300 md:w-[33rem]"
+        className="z-10 m-auto mt-4 flex w-[60%] min-w-[17rem] flex-col rounded-sm border-[1px]
+        border-white/10 px-2 py-4 text-slate-300 backdrop-blur-md sm:mt-14 sm:py-14 sm:px-16 md:w-[47rem]"
       >
         <div>
-          <div className="flex justify-between bg-slate-800">
+          <div className="flex justify-between bg-gray-700/10">
             <input
               readOnly
               defaultValue={
@@ -110,7 +109,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
             type="text"
             {...register('name')}
             placeholder="Nome"
-            className={`mt-1 w-full rounded-sm bg-slate-700 py-3 px-2 outline-none ${
+            className={`mt-1 w-full rounded-sm bg-gray-700/20 py-3 px-2 outline-none ${
               !user.isSignedIn && 'cursor-not-allowed bg-slate-800'
             }`}
           />
@@ -127,18 +126,20 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
             rows={5}
             {...register('message')}
             placeholder="Mensagem"
-            className={`mt-1 w-full resize-none rounded-sm bg-slate-700 py-3 px-2 outline-none ${
-              !user.isSignedIn && 'cursor-not-allowed bg-slate-800'
-            }`}
+            className={`mt-1 w-full resize-none rounded-sm bg-gray-700/20 py-3 px-2 outline-none
+              ${!user.isSignedIn && 'cursor-not-allowed bg-slate-800'}
+            `}
           />
         </div>
 
         <button
           disabled={!user.isSignedIn}
-          className={`w-full rounded-md bg-slate-800 py-3 text-xl font-bold text-slate-400 transition-all duration-500 hover:bg-slate-700 ${
-            !user.isSignedIn &&
-            'cursor-not-allowed bg-slate-800 hover:bg-slate-800'
-          }`}
+          className={`w-full rounded-md bg-slate-800 bg-gray-700/20 py-3 text-xl font-bold
+           text-slate-400 transition-all duration-500 ${
+             !user.isSignedIn
+               ? 'cursor-not-allowed hover:bg-gray-700/20'
+               : 'hover:bg-slate-700/30'
+           }`}
           type="submit"
         >
           ENVIAR

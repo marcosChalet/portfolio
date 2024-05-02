@@ -17,33 +17,31 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <Layout
-      id={'about'}
-      sectionClass="px-2 py-10 md:px-10 md:py-20 text-4xl bg-[#121b32] 2xl:py-40"
-    >
-      <div className="glow-sm md:glow absolute right-16 top-5 md:top-20 md:right-32" />
-      <h1 className="absolute top-5 left-3 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-bold text-transparent sm:left-14 sm:text-4xl">
-        SOBRE
-      </h1>
-      <div className="relative mx-2 flex w-full px-5 py-1 text-left text-sm font-semibold sm:basis-3/4 sm:text-xl xl:text-2xl">
-        <span className="absolute -ml-5 h-full w-1 rounded-sm bg-slate-600" />
-        <div className={montserrat.className}>
-          <span className="underline">Desenvolvedor Web Full Stack.</span>
-          <span className="inline-block pt-5">
-            Estudante de Ciência da Computação com experiência em
-            Desenvolvimento Web Full Stack. Apesar de já possuir experiência com
-            React.js, NestJs e TypeScript, também estou explorando as
-            possibilidades do desenvolvimento de software, especialmente por
-            meio dos estudos na área de DevOps.
-          </span>
+    <Layout id={'about'} sectionClass="text-4xl sm:mt-20 rounded-sm">
+      <div className="-mx-4 flex flex-col sm:mx-3">
+        <h1
+          className="bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text
+          text-3xl font-bold text-transparent sm:text-4xl
+        "
+        >
+          SOBRE
+        </h1>
+        <span
+          className={`mt-4 ml-5 flex w-full max-w-[95%] text-left text-sm font-semibold 
+          sm:mt-10 sm:max-w-[80%] sm:basis-3/4 sm:text-xl ${montserrat.className}`}
+        >
+          Sou um desenvolvedor web com mais de 2 anos de experiência em React,
+          TypeScript e Node. Atualmente, estou atuando como desenvolvedor Full
+          Stack, utilizando React e NestJS. No entanto, estou buscando aprimorar
+          minhas habilidades no desenvolvimento de backend.
+        </span>
+        <div className="absolute right-0 hidden animate-float items-center sm:flex">
+          <img
+            className="h-44 w-44 xl:h-44 xl:w-64"
+            src="/imgs/computer.svg"
+            alt="computer image"
+          />
         </div>
-      </div>
-      <div className="absolute right-5 hidden animate-float items-center sm:flex">
-        <img
-          className="h-36 w-64 xl:h-40 xl:w-72"
-          src="/imgs/computer.svg"
-          alt="computer image"
-        />
       </div>
     </Layout>
   );
