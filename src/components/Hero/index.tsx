@@ -9,7 +9,7 @@ export default function Hero({ isVisible, setSection }: SectionVisibleType) {
   return (
     <section
       id={'hero'}
-      className="flex items-center justify-center py-36 text-slate-200 sm:h-[80vh] 2xl:py-36"
+      className="flex max-h-[1000px] items-center justify-center py-36 text-slate-200 sm:h-[80vh] 2xl:py-36"
     >
       <h1 className="inline-block w-full max-w-sm flex-col text-center text-3xl font-bold leading-none md:max-w-4xl md:text-6xl xl:text-[5rem]">
         Olá, Sou o{' '}
