@@ -58,7 +58,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
         method="post"
         onSubmit={handleSubmit(sendMessage)}
         className="z-10 m-auto mt-4 flex w-[60%] min-w-[17rem] flex-col rounded-sm border-[1px]
-        border-white/10 px-2 py-4 text-slate-300 backdrop-blur-md sm:mt-14 sm:w-[35rem] sm:py-14 sm:px-16 lg:w-[47rem]"
+        border-[#777]/10 px-2 py-4 text-slate-300 backdrop-blur-md sm:mt-14 sm:w-[35rem] sm:py-14 sm:px-16 lg:w-[47rem]"
       >
         <div>
           <div className="flex justify-between bg-gray-700/20">

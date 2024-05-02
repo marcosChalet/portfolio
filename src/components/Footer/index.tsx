@@ -31,7 +31,7 @@ export default function Footer() {
   return (
     <Layout id={'footer'} articleClass="flex-col w-full">
       <footer className="relative flex flex-col items-center justify-center text-slate-400">
-        <div className="grid w-full grid-cols-3 items-center justify-center  border-white/10 sm:grid-cols-4">
+        <div className="grid w-full grid-cols-3 items-center justify-center  border-[#777]/10 sm:grid-cols-4">
           {socialMedia.map((media) => {
             return (
               <a
@@ -39,7 +39,7 @@ export default function Footer() {
                 href={media.url}
                 target="_blank"
                 className="flex h-44 items-center justify-center gap-1 border-[1px] border-r-0 border-l-0
-                border-white/10 text-sm font-medium duration-500 hover:bg-slate-600/10 sm:gap-4 sm:text-xl"
+                border-[#777]/10 text-sm font-medium duration-500 hover:bg-slate-600/10 sm:gap-4 sm:text-xl"
               >
                 {media.img != '' && (
                   <img

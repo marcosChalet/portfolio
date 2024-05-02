@@ -81,7 +81,7 @@ export default function Projects({
             <div
               key={project.title}
               className={`h-[420px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
-              border-white/10 p-4 font-bold text-slate-400 hover:cursor-pointer
+              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer
                 ${idx > 2 && 'h-[520px] sm:col-span-2'}
                 ${idx === 2 && 'sm:col-span-2'}
               `}

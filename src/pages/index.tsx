@@ -28,8 +28,8 @@ export default function Home() {
       </Head>
       <main className="scrollbar-hide relative bg-black">
         <div
-          className="absolute inset-0 mx-10 grid grid-cols-3 divide-x-[1px] divide-white/10
-            border-x-[1px] border-white/10 md:mx-20 md:grid-cols-4 xl:mx-40"
+          className="absolute inset-0 mx-10 grid grid-cols-3 divide-x-[1px] divide-[#777]/10
+            border-x-[1px] border-[#777]/10 md:mx-20 md:grid-cols-4 xl:mx-40"
         >
           <div />
           <div />
