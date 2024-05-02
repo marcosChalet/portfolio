@@ -13,14 +13,6 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/memory-game',
   },
   {
-    title: 'Jogo da Velha',
-    img: '/imgs/velha-project.png',
-    alt: 'imagem de um tabuleiro de jogo da velha',
-    description: 'Jogo da velha desenvolvido com NextJs.',
-    productionLink: 'https://jogo-da-velha-sage-one.vercel.app/',
-    githubLink: 'https://github.com/marcosChalet/jogo-da-velha',
-  },
-  {
     title: 'Chalet blog',
     img: '/imgs/blog-project.png',
     alt: 'blog pessoal desenvolvido em Next.js',
@@ -30,13 +22,12 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/chalet-blog',
   },
   {
-    title: 'Logic Calculator',
-    img: '/imgs/logicCalculator-project.png',
-    alt: 'imagem de uma calculadora de expressões lógicas',
-    description:
-      'Calculadora que processa uma expressão lógica e cria sua tabela verdade.',
-    productionLink: 'https://marcoschalet.github.io/logic-calculator/',
-    githubLink: 'https://github.com/marcosChalet/logic-calculator',
+    title: '',
+    img: '/imgs/ecommerce-project.png',
+    alt: 'imagem de um ecommerce',
+    description: 'eCommerce desenvolvido com React, TypeScript e Nest.',
+    productionLink: 'https://frontend-ecommerce-seven-alpha.vercel.app/',
+    githubLink: 'https://github.com/marcosChalet/frontend-ecommerce',
   },
   {
     title: 'Next CRUD',
@@ -91,7 +82,8 @@ export default function Projects({
               key={project.title}
               className={`h-[420px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
               border-white/10 p-4 font-bold text-slate-400 hover:cursor-pointer
-                ${idx > 3 && 'h-[520px] sm:col-span-2'}
+                ${idx > 2 && 'h-[520px] sm:col-span-2'}
+                ${idx === 2 && 'sm:col-span-2'}
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
