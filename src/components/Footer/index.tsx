@@ -31,7 +31,7 @@ export default function Footer() {
   return (
     <Layout id={'footer'} articleClass="flex-col w-full">
       <footer className="relative flex flex-col items-center justify-center text-slate-400">
-        <div className="grid w-full grid-cols-3 items-center justify-center sm:grid-cols-4">
+        <div className="grid w-full grid-cols-3 items-center justify-center  border-white/10 sm:grid-cols-4">
           {socialMedia.map((media) => {
             return (
               <a
