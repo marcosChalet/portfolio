@@ -79,7 +79,7 @@ export default function Projects({
         {projects.map((project, idx) => {
           return (
             <div
-              key={project.title}
+              key={project.githubLink}
               className={`h-[420px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
               border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer
                 ${idx > 2 && 'h-[520px] sm:col-span-2'}
@@ -117,6 +117,12 @@ export default function Projects({
                   </div>
                 </div>
                 <Image
+                  priority={
+                    project.githubLink ===
+                    'https://github.com/marcosChalet/marvel-page'
+                      ? true
+                      : false
+                  }
                   width={1200}
                   height={900}
                   src={project.img}

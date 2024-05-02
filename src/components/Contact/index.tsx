@@ -44,9 +44,13 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <Layout id={'contact'} articleClass="flex-col w-full my-28 sm:my-52">
+    <Layout
+      id={'contact'}
+      articleClass="flex-col w-full my-28 sm:my-52"
+      sectionClass="mx-2"
+    >
       <h1
-        className={`-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl
+        className={`mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl
           font-bold text-transparent sm:ml-3 sm:text-4xl
         `}
       >
