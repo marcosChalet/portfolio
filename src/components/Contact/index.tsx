@@ -61,7 +61,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
         border-white/10 px-2 py-4 text-slate-300 backdrop-blur-md sm:mt-14 sm:py-14 sm:px-16 md:w-[47rem]"
       >
         <div>
-          <div className="flex justify-between bg-gray-700/10">
+          <div className="flex justify-between bg-gray-700/20">
             <input
               readOnly
               defaultValue={
@@ -110,7 +110,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
             {...register('name')}
             placeholder="Nome"
             className={`mt-1 w-full rounded-sm bg-gray-700/20 py-3 px-2 outline-none ${
-              !user.isSignedIn && 'cursor-not-allowed bg-slate-800'
+              !user.isSignedIn && 'cursor-not-allowed'
             }`}
           />
         </div>
@@ -127,18 +127,18 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
             {...register('message')}
             placeholder="Mensagem"
             className={`mt-1 w-full resize-none rounded-sm bg-gray-700/20 py-3 px-2 outline-none
-              ${!user.isSignedIn && 'cursor-not-allowed bg-slate-800'}
+              ${!user.isSignedIn && 'cursor-not-allowed'}
             `}
           />
         </div>
 
         <button
           disabled={!user.isSignedIn}
-          className={`w-full rounded-md bg-slate-800 bg-gray-700/20 py-3 text-xl font-bold
+          className={`w-full rounded-md bg-gray-700/20 py-3 text-xl font-bold
            text-slate-400 transition-all duration-500 ${
              !user.isSignedIn
                ? 'cursor-not-allowed hover:bg-gray-700/20'
-               : 'hover:bg-slate-700/30'
+               : 'hover:bg-gray-700/30'
            }`}
           type="submit"
         >
