@@ -59,16 +59,21 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
   }, [isVisible]);
 
   return (
-    <Layout id={'skills'} articleClass="w-full flex-col mt-36 sm:mt-48">
+    <Layout
+      id={'skills'}
+      articleClass="w-full flex-col mt-36 sm:mt-48"
+      sectionClass="relative"
+    >
+      <div className="absolute inset-0 bg-gradient-to-t from-black" />
       <h1
-        className="-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
+        className="z-10 -mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
           bg-clip-text text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl"
       >
         HABILIDADES
       </h1>
 
       <div
-        className={`m-auto mt-4 flex w-full flex-wrap items-center
+        className={`z-10 m-auto mt-4 flex w-full flex-wrap items-center
           justify-center gap-3 sm:mt-10 sm:max-w-[80%]
         `}
       >

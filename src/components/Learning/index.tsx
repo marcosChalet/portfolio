@@ -24,16 +24,21 @@ export default function Learning({
   }, [isVisible]);
 
   return (
-    <Layout id={'learning'} articleClass="w-full flex-col pt-36 sm:pt-48">
+    <Layout
+      id={'learning'}
+      articleClass="w-full flex-col pt-36 sm:pt-48"
+      sectionClass="relative"
+    >
+      <div className="absolute inset-0 bg-gradient-to-bl from-black" />
       <h1
-        className={`-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 
+        className={`z-10 -mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
           bg-clip-text text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl
         `}
       >
         ESTUDANDO
       </h1>
 
-      <div className="m-auto mt-4 flex w-full max-w-[80%] flex-wrap items-center justify-center gap-3 sm:mt-10">
+      <div className="z-10 m-auto mt-4 flex w-full max-w-[80%] flex-wrap items-center justify-center gap-3 sm:mt-10">
         {learningSkills.map((item) => {
           return (
             <div

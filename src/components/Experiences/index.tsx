@@ -53,8 +53,9 @@ export default function Experiences({
     <Layout
       id={'experiences'}
       articleClass="w-full flex-col py-36 sm:py-64 overflow-visible"
-      sectionClass="overflow-visible"
+      sectionClass="overflow-visible relative"
     >
+      <div className="bg-gradient-to-lt absolute inset-0 from-black" />
       <h1
         className="-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text 
           text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl"
