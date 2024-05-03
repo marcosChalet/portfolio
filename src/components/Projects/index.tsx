@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: 'Memory Game',
-    img: '/imgs/memory-project.png',
-    alt: 'imagem de um jogo da memória',
-    description: 'Jogo da memória desenvolvido com NextJs.',
-    productionLink: 'https://memory-game-seven-rho.vercel.app/',
-    githubLink: 'https://github.com/marcosChalet/memory-game',
+    title: '',
+    img: '/imgs/todoapp.png',
+    alt: 'imagem de listas de tarefas',
+    description: 'Todo app desenvolvido com React e spring.',
+    productionLink: 'https://github.com/marcosChalet/toDoList-java-react',
+    githubLink: 'https://github.com/marcosChalet/toDoList-java-react',
   },
   {
     title: 'Chalet blog',
@@ -80,10 +80,9 @@ export default function Projects({
           return (
             <div
               key={project.githubLink}
-              className={`h-[420px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
-              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer
-                ${idx > 2 && 'h-[520px] sm:col-span-2'}
-                ${idx === 2 && 'sm:col-span-2'}
+              className={`h-[400px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
+              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-2
+                ${idx === 4 && 'sm:col-span-4 md:h-[600px] xl:h-[820px]'}
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
@@ -123,8 +122,8 @@ export default function Projects({
                       ? true
                       : false
                   }
-                  width={1200}
-                  height={900}
+                  width={idx === 4 ? 1400 : 1200}
+                  height={idx === 4 ? 1100 : 900}
                   src={project.img}
                   alt={project.alt}
                   className="h-full w-full object-cover"
