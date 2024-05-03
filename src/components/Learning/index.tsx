@@ -31,9 +31,8 @@ export default function Learning({
     >
       <div className="absolute inset-0 bg-gradient-to-bl from-black" />
       <h1
-        className={`z-10 -mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
-          bg-clip-text text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl
-        `}
+        className="title-text-clamp z-10 -mx-4 bg-gradient-to-r from-fuchsia-500
+          to-rose-500 bg-clip-text font-bold text-transparent sm:ml-3"
       >
         ESTUDANDO
       </h1>

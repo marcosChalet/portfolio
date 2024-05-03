@@ -57,8 +57,8 @@ export default function Experiences({
     >
       <div className="bg-gradient-to-lt absolute inset-0 from-black" />
       <h1
-        className="-mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text 
-          text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl"
+        className="title-text-clamp -mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 
+          bg-clip-text font-bold text-transparent sm:ml-3"
       >
         EXPERIÊNCIA
       </h1>
@@ -81,7 +81,7 @@ export default function Experiences({
               <h2 className="mt-1 w-full text-lg font-semibold text-slate-200/75">
                 {experience.local}
               </h2>
-              <span className="text-md mt-3 w-full italic leading-5">
+              <span className="text-md card-text-clamp mt-3 w-full italic leading-5 2xl:leading-[22px]">
                 {experience.description}
               </span>
             </li>

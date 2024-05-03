@@ -32,6 +32,22 @@
   .background-glow-red {
     background-image: radial-gradient(circle at left, #3104797c, #000 32%);
   }
+
+  .title-text-clamp {
+    font-size: clamp(25px, 4vw, 45px) !important;
+  }
+
+  .hero-text-clamp {
+    font-size: clamp(33px, 7vw, 85px) !important;
+  }
+
+  .paragraph-text-clamp {
+    font-size: clamp(14px, 1.1vw, 28px) !important;
+  }
+
+  .card-text-clamp {
+    font-size: clamp(13px, 0.8vw, 20px) !important;
+  }
 }
 
 :root {

@@ -64,8 +64,8 @@ export default function Projects({
       articleClass="flex-wrap items-center justify-center sm:pt-20 pb-5"
     >
       <h1
-        className={`bg-gradient-to-r from-fuchsia-500 to-rose-500
-          bg-clip-text text-4xl font-black text-transparent sm:text-6xl
+        className={`title-text-clamp bg-gradient-to-r from-fuchsia-500
+          to-rose-500 bg-clip-text font-black text-transparent
         `}
       >
         PROJETOS

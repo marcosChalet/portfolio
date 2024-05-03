@@ -50,8 +50,8 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
       sectionClass="mx-2"
     >
       <h1
-        className={`mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500 bg-clip-text text-3xl
-          font-bold text-transparent sm:ml-3 sm:text-4xl
+        className={`title-text-clamp mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
+          bg-clip-text font-bold text-transparent sm:ml-3
         `}
       >
         CONTATO

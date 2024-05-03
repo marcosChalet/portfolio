@@ -66,15 +66,15 @@ export default function Skills({ isVisible, setSection }: SectionVisibleType) {
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black" />
       <h1
-        className="z-10 -mx-4 bg-gradient-to-r from-fuchsia-500 to-rose-500
-          bg-clip-text text-3xl font-bold text-transparent sm:ml-3 sm:text-4xl"
+        className="title-text-clamp z-10 -mx-4 bg-gradient-to-r from-fuchsia-500
+          to-rose-500 bg-clip-text font-bold text-transparent sm:ml-3"
       >
         HABILIDADES
       </h1>
 
       <div
-        className={`z-10 m-auto mt-4 flex w-full flex-wrap items-center
-          justify-center gap-3 sm:mt-10 sm:max-w-[80%]
+        className={`z-10 m-auto mt-4 flex w-full flex-wrap
+          items-center justify-center gap-3 sm:mt-10 sm:max-w-[1124px]
         `}
       >
         {skills.map((item) => {
