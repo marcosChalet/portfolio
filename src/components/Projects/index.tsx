@@ -82,7 +82,11 @@ export default function Projects({
               key={project.githubLink}
               className={`h-[400px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
               border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-2
-                ${idx === 4 && 'sm:col-span-4 md:h-[600px] xl:h-[820px]'}
+                ${
+                  idx === 4 &&
+                  'sm:col-span-2 sm:col-start-2 sm:col-end-4 md:h-[500px]'
+                }
+                ${idx === 2 && 'sm:row-span-2'}
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
