@@ -72,21 +72,16 @@ export default function Projects({
       </h1>
 
       <div
-        className={`mt-6 grid w-full grid-flow-row-dense grid-cols-1 
-          sm:mt-16 sm:grid-cols-2 lg:grid-cols-4
+        className={`image-container mt-6 grid w-full grid-flow-row-dense
+          grid-cols-1 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4
         `}
       >
         {projects.map((project, idx) => {
           return (
             <div
               key={project.githubLink}
-              className={`h-[400px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0 
-              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-2
-                ${
-                  idx === 4 &&
-                  'sm:col-span-2 sm:col-start-2 sm:col-end-4 md:h-[500px]'
-                }
-                ${idx === 2 && 'sm:row-span-2'}
+              className={`card h-[480px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0
+              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-4 sm:h-[800px]
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
