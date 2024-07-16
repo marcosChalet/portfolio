@@ -10,7 +10,7 @@ type ExprerienceType = {
 
 const experiences: ExprerienceType[] = [
   {
-    date: 'Mar 2021 até Mar 2022',
+    date: 'Mar 2020 até Mar 2021',
     local: 'Universidade Federal do Ceará',
     description:
       'Durante minha experiência acadêmica em Computação Gráfica, realizei pesquisas, desenvolvi materiais didáticos e auxiliei no acompanhamento da disciplina de Computação Gráfica.',
@@ -28,13 +28,13 @@ const experiences: ExprerienceType[] = [
       'Participo como desenvolvedor web front-end como voluntário, utilizando React e TypeScript. Destaca-se minha contribuição no desenvolvimento de uma plataforma para gerenciamento de pedidos.',
   },
   {
-    date: 'Jul 2023 até Agora',
+    date: 'Jul 2023 até Dez 2023',
     local: 'Universidade Federal do Cariri',
     description:
       'Estágio em desenvolvimento web e DevOps. Trabalhei com foco na implantação do sistema para processo seletivo na UFCA. Participei da migração de módulos de um sistema monolítico para micro-serviços, utilizando docker para containerização. Aqui trabalhei com tecnologias como Java, PostgreSQL, Docker, Apache, Eureka, Kong...',
   },
   {
-    date: 'Jan 2024 até Agora',
+    date: 'Jan 2024 até Jun 2024',
     local: 'Compass UOL',
     description:
       'Estágio em desenvolvimento web full stack + AWS. Desenvolvi projetos voltados a área de comercial, utilizando React, TypeScript, Prisma e Nest.',
