@@ -79,8 +79,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
 
             {!user.isSignedIn ? (
               <SignInButton
-                afterSignInUrl="/#contact"
-                afterSignUpUrl="/#contact"
+                fallbackRedirectUrl={"/#contact"}
                 children={
                   <img
                     src="/imgs/google.svg"
