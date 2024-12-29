@@ -55,7 +55,7 @@ export default function Home() {
       </Head>
       <main
         ref={main}
-        className="scrollbar-hide relative m-auto max-w-[2560px] bg-black"
+        className="scrollbar-hide relative m-auto overflow-clip w-[calc(100vw-2px)] max-w-[2560px] bg-black"
       >
         <div
           className="absolute inset-0 mx-10 grid grid-cols-3 divide-x-[1px] divide-[#777]/10
