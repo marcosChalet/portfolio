@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { JSX, useState } from 'react';
 import { BarContext } from './BarContext';
 
 export default function BarProvider({ children }: { children: JSX.Element }) {
