@@ -10,34 +10,29 @@ type ExprerienceType = {
 
 const experiences: ExprerienceType[] = [
   {
-    date: 'Mar 2020 até Mar 2021',
-    local: 'Universidade Federal do Ceará',
-    description:
-      'Durante minha experiência acadêmica em Computação Gráfica, realizei pesquisas, desenvolvi materiais didáticos e auxiliei no acompanhamento da disciplina de Computação Gráfica.',
+    date: 'Jan 2024 até Fev 2025',
+    local: 'Compass UOL',
+    description: 'Desenvolvedor Web Full Stack com experiência em digital commerce. Atuei no desenvolvimento de aplicações utilizando React, TypeScript, Java, Spring Boot e NestJS, contribuindo para soluções escaláveis e de alto desempenho. Participei ativamente dos projetos Divvino, ClubeD e do Backoffice do ClubeD para o supermercado Angeloni, focando na criação, otimização, integração de sistemas e aprimoramento da experiência do usuário.',
   },
   {
-    date: 'Abr 2022 até Nov 2022',
-    local: 'Universidade Federal do Cariri',
-    description:
-      'Durante a monitoria em estruturas de dados e introdução à computação eu elaborei material didático, criei exercícios e prestei assistência aos alunos por meio de monitorias.',
-  },
-  {
-    date: 'Abr 2023 até Agora',
+    date: 'Abr 2023 até Fev 2025',
     local: 'Calang.io',
-    description:
-      'Participo como desenvolvedor web front-end como voluntário, utilizando React e TypeScript. Destaca-se minha contribuição no desenvolvimento de uma plataforma para gerenciamento de pedidos.',
+    description: 'Trabalho voluntário na empresa júnior utilizando React e TypeScript em projetos para pequenas empresas da região do Cariri.',
   },
   {
     date: 'Jul 2023 até Dez 2023',
     local: 'Universidade Federal do Cariri',
-    description:
-      'Estágio em desenvolvimento web e DevOps. Trabalhei com foco na implantação do sistema para processo seletivo na UFCA. Participei da migração de módulos de um sistema monolítico para micro-serviços, utilizando docker para containerização. Aqui trabalhei com tecnologias como Java, PostgreSQL, Docker, Apache, Eureka, Kong...',
+    description: 'Estágio em desenvolvimento web e DevOps, com foco na implantação e customização do sistema de processo seletivo na UFCA. Durante o estágio, participei da migração de módulos de um sistema legado para microsserviços, utilizando Docker para conteinerização. Durante o projeto, trabalhei diretamente com tecnologias como Java, PostgreSQL, Docker, Apache, Eureka e Kong.',
   },
   {
-    date: 'Jan 2024 até Jun 2024',
-    local: 'Compass UOL',
-    description:
-      'Estágio em desenvolvimento web full stack + AWS. Desenvolvi projetos voltados a área de comercial, utilizando React, TypeScript, Prisma e Nest.',
+    date: 'Abr 2022 até Nov 2022',
+    local: 'Universidade Federal do Cariri',
+    description: 'Durante a monitoria em estruturas de dados e introdução à computação eu elaborei material didático, criei exercícios e prestei assistência aos alunos por meio de monitorias em sala de aula, resultando em um aumento em 20% na taxa de aprovação da disciplina. Essa experiência agregou, 1/2 além da minha capacidade de comunicação, na minha base em algoritmos, proporcionando um conhecimento sólido e aprofundado na área.',
+  },
+  {
+    date: 'Mar 2020 até Mar 2021',
+    local: 'Universidade Federal do Ceará',
+    description: 'Durante minha experiência acadêmica em Computação Gráfica eu realizei pesquisas, desenvolvi materiais didáticos e auxiliei no acompanhamento da disciplina de Computação Gráfica.',
   },
 ];
 
