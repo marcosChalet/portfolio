@@ -30,10 +30,10 @@ export default function About({ isVisible, setSection }: SectionVisibleType) {
           className={`paragraph-text-clamp mt-4 ml-5 flex w-full max-w-[95%] text-left font-semibold leading-5
           sm:mt-10 sm:max-w-[80%] sm:basis-3/4 xl:leading-6 2xl:leading-7 ${montserrat.className}`}
         >
-          Sou um desenvolvedor web com mais de 2 anos de experiência em React,
+          Sou um desenvolvedor web com mais de 3 anos de experiência em React,
           TypeScript e Node. Atualmente, estou atuando como desenvolvedor Full
-          Stack, utilizando React e NestJS. No entanto, estou buscando aprimorar
-          minhas habilidades no desenvolvimento de backend.
+          Stack, utilizando React e NestJS. No entanto, busco me tornar um especialista
+          em desenvolvimento backend com Java + Spring Boot.
         </span>
         <div className="absolute right-0 top-16 hidden animate-float items-center sm:flex md:top-14 xl:top-0">
           <img
