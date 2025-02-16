@@ -4,14 +4,19 @@ import Layout from '../ui/Layout';
 
 const learningSkills = [
   {
-    language: 'Kubernetes',
-    alt: 'Kubernetes logo',
-    iconPath: '/imgs/k8s-logo.svg',
-  },
-  {
     language: 'Nestjs',
     alt: 'Nestjs logo',
     iconPath: '/imgs/nestjs-logo.svg',
+  },
+  {
+    language: 'Spring',
+    alt: 'Spring logo',
+    iconPath: '/imgs/spring-logo.svg',
+  },
+  {
+    language: 'PostgreSQL',
+    alt: 'PostgreSQL logo',
+    iconPath: '/imgs/postgresql-logo.svg',
   },
 ];
 

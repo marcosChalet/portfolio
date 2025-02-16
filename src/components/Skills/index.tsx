@@ -51,6 +51,11 @@ const skills = [
     alt: 'Spring logo',
     icnPath: '/imgs/spring-logo.svg',
   },
+  {
+    language: 'Express',
+    alt: 'Express logo',
+    icnPath: '/imgs/express-logo.svg',
+  },
 ];
 
 export default function Skills({ isVisible, setSection }: SectionVisibleType) {
