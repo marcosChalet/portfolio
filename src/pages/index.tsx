@@ -94,7 +94,7 @@ export default function Home() {
             )}
           </TrackVisibility>
 
-          <TrackVisibility offset={100}>
+          <TrackVisibility offset={400}>
             {({ isVisible }: { isVisible: boolean }) => (
               <Experiences isVisible={isVisible} setSection={bar.setSection} />
             )}
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
 
         <div className="background-glow-green">
-          <TrackVisibility offset={700}>
+          <TrackVisibility offset={2900}>
             {({ isVisible }: { isVisible: boolean }) => (
               <div className="box">
                 <Projects isVisible={isVisible} setSection={bar.setSection} />
