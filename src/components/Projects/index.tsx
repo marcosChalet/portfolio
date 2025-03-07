@@ -23,10 +23,18 @@ const projects = [
   },
   {
     title: '',
+    img: '/imgs/ecommerce-3-project.png',
+    alt: 'imagem de um ecommerce',
+    description: 'eCommerce desenvolvido com HTML5, CSS3 e JavaScript.',
+    productionLink: 'https://ecommerce3.marcoschalet.com/',
+    githubLink: 'https://github.com/marcosChalet/ecommerce-3',
+  },
+  {
+    title: '',
     img: '/imgs/ecommerce-project.png',
     alt: 'imagem de um ecommerce',
     description: 'eCommerce desenvolvido com React, TypeScript e Nest.',
-    productionLink: 'https://frontend-ecommerce-seven-alpha.vercel.app/',
+    productionLink: 'https://ecommerce.marcoschalet.com',
     githubLink: 'https://github.com/marcosChalet/frontend-ecommerce',
   },
   {
@@ -34,7 +42,7 @@ const projects = [
     img: '/imgs/next-crud-project.png',
     alt: 'imagem de um projeto de crud',
     description: 'Crud NextJs utilizando o Firebase e TypeScript.',
-    productionLink: 'https://crud.mchalet.xyz/',
+    productionLink: 'https://crud.marcoschalet.com/',
     githubLink: 'https://github.com/marcosChalet/next-crud',
   },
   {
@@ -42,7 +50,7 @@ const projects = [
     img: '/imgs/marvel-project.png',
     alt: 'imagem de commics da Marvel',
     description: 'Página que consome a API da Marvel e do Google Maps.',
-    productionLink: 'https://marvel-page-dusky.vercel.app/',
+    productionLink: 'https://marvel.marcoschalet.com',
     githubLink: 'https://github.com/marcosChalet/marvel-page',
   },
 ];
