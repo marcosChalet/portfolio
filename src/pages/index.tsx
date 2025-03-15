@@ -29,7 +29,6 @@ export default function Home() {
     contact: false,
   });
 
-  // Impede redirecionamentos por hash removendo-os da URL
   useEffect(() => {
     const removeHash = () => {
       if (window.location.hash) {
@@ -146,7 +145,7 @@ export default function Home() {
         <link rel="icon" href="/favicn.ico" />
       </Head>
 
-      <main className="scrollbar-hide relative m-auto overflow-clip w-[calc(100vw-2px)] max-w-[2560px] bg-black">
+      <main className="scrollbar-hide relative h-auto m-auto w-[calc(100vw-2px)] max-w-[2560px] bg-black">
         <Ribons section={bar.section} />
 
         <div ref={containerRef}>

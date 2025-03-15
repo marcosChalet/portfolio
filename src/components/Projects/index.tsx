@@ -13,7 +13,7 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/toDoList-java-react',
   },
   {
-    title: '',
+    title: 'Blog Next',
     img: '/imgs/blog-project.png',
     alt: 'blog pessoal desenvolvido em Next.js',
     description:
@@ -46,7 +46,7 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/next-crud',
   },
   {
-    title: '',
+    title: 'Marvel API',
     img: '/imgs/marvel-project.png',
     alt: 'imagem de commics da Marvel',
     description: 'Página que consome a API da Marvel e do Google Maps.',
@@ -89,7 +89,7 @@ export default function Projects({
             <div
               key={project.githubLink}
               className={`card h-[300px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0
-                border-[#777]/10 sm:p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-4 sm:h-fit
+                border-[#777]/10 sm:p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-4 sm:h-[800px] w-full
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
@@ -133,7 +133,7 @@ export default function Projects({
                   height={idx === 4 ? 1100 : 900}
                   src={project.img}
                   alt={project.alt}
-                  className="h-full w-full object-cover sm:object-contain"
+                  className="h-full w-full object-cover"
                 />
                 <span className="absolute top-2 left-3 group-hover:opacity-0">
                   {project.title}
