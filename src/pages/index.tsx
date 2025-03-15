@@ -1,45 +1,137 @@
-import About from '@/components/About';
-import Contact from '@/components/Contact';
-import Experiences from '@/components/Experiences';
-import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import Learning from '@/components/Learning';
-import Projects from '@/components/Projects';
-import Ribons from '@/components/Ribons';
-import Skills from '@/components/Skills';
-import { BarContext } from '@/context/BarContext';
-import TrackVisibility from 'react-on-screen';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { BarContext } from '@/context/BarContext';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Learning from '@/components/Learning';
+import Experiences from '@/components/Experiences';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import Ribons from '@/components/Ribons';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const bar = useContext(BarContext);
-  const main = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const [sectionsVisibility, setSectionsVisibility] = useState({
+    hero: false,
+    about: false,
+    skills: false,
+    learning: false,
+    experiences: false,
+    projects: false,
+    contact: false,
+  });
+
+  // Impede redirecionamentos por hash removendo-os da URL
+  useEffect(() => {
+    const removeHash = () => {
+      if (window.location.hash) {
+        window.history.replaceState(
+          null,
+          '',
+          window.location.pathname + window.location.search,
+        );
+      }
+    };
+
+    removeHash();
+    window.addEventListener('hashchange', removeHash);
+    return () => window.removeEventListener('hashchange', removeHash);
+  }, []);
 
   useEffect(() => {
-    gsap.utils.toArray('.card').forEach((card: any, index) => {
-      gsap.to(card, {
-        yPercent: -100,
-        ease: 'power3.out',
-        scrollBehavior: 'smooth',
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 8%',
-          end: 'bottom 8%',
-          scrub: true,
-          snap: {
-            snapTo: 'labels',
-            duration: { min: 0.2, max: 3 },
-            delay: 1,
-          },
+    let scrollY = 0;
+    let velocity = 0;
+    const container = containerRef.current;
+    if (!container) return;
+
+    const updateScroll = () => {
+      scrollY += velocity;
+      velocity *= 0.98;
+      const maxScroll = container.offsetHeight - window.innerHeight;
+      if (scrollY < 0) {
+        scrollY = 0;
+        velocity = 0;
+      } else if (scrollY > maxScroll) {
+        scrollY = maxScroll;
+        velocity = 0;
+      }
+      container.style.transform = `translateY(-${scrollY}px)`;
+      ScrollTrigger.update();
+      requestAnimationFrame(updateScroll);
+    };
+
+    const onWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      velocity += event.deltaY * 0.015;
+    };
+    document.addEventListener('wheel', onWheel, { passive: false });
+    updateScroll();
+
+    ScrollTrigger.scrollerProxy(container, {
+      scrollTop(value?: number) {
+        if (typeof value === 'number') {
+          scrollY = value;
+        }
+        return scrollY;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+    });
+
+    const triggers = (
+      gsap.utils.toArray('[data-section]') as HTMLElement[]
+    ).map((el) => {
+      return ScrollTrigger.create({
+        trigger: el,
+        scroller: container,
+        start: 'top 30%',
+        onEnter: () => {
+          const id = el.getAttribute('data-section');
+          if (id) {
+            setSectionsVisibility((prev) => ({ ...prev, [id]: true }));
+          }
+        },
+        onEnterBack: () => {
+          const id = el.getAttribute('data-section');
+          if (id) {
+            setSectionsVisibility((prev) => ({ ...prev, [id]: true }));
+          }
+        },
+        onLeave: () => {
+          const id = el.getAttribute('data-section');
+          if (id) {
+            setSectionsVisibility((prev) => ({ ...prev, [id]: false }));
+          }
+        },
+        onLeaveBack: () => {
+          const id = el.getAttribute('data-section');
+          if (id) {
+            setSectionsVisibility((prev) => ({ ...prev, [id]: false }));
+          }
         },
       });
     });
+
+    ScrollTrigger.refresh();
+
+    return () => {
+      document.removeEventListener('wheel', onWheel);
+      triggers.forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
@@ -53,69 +145,65 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicn.ico" />
       </Head>
-      <main
-        ref={main}
-        className="scrollbar-hide relative m-auto overflow-clip w-[calc(100vw-2px)] max-w-[2560px] bg-black"
-      >
-        <div
-          className="absolute inset-0 mx-10 grid grid-cols-3 divide-x-[1px] divide-[#777]/10
-            border-x-[1px] border-[#777]/10 md:mx-20 md:grid-cols-4 xl:mx-40"
-        >
-          <div />
-          <div />
-          <div />
-          <div className="hidden md:flex" />
-        </div>
+
+      <main className="scrollbar-hide relative m-auto overflow-clip w-[calc(100vw-2px)] max-w-[2560px] bg-black">
         <Ribons section={bar.section} />
-        <div className="background-glow-blue">
-          <TrackVisibility>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <Hero isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
+        <div ref={containerRef}>
+          <div className="background-glow-blue">
+            <section data-section="hero">
+              <Hero
+                isVisible={sectionsVisibility.hero}
+                setSection={bar.setSection}
+              />
+            </section>
 
-          <TrackVisibility>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <About isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
+            <section data-section="about">
+              <About
+                isVisible={sectionsVisibility.about}
+                setSection={bar.setSection}
+              />
+            </section>
 
-          <TrackVisibility>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <Skills isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
-        </div>
+            <section data-section="skills">
+              <Skills
+                isVisible={sectionsVisibility.skills}
+                setSection={bar.setSection}
+              />
+            </section>
+          </div>
 
-        <div className="background-glow-red">
-          <TrackVisibility>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <Learning isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
+          <div className="background-glow-pink">
+            <section data-section="learning">
+              <Learning
+                isVisible={sectionsVisibility.learning}
+                setSection={bar.setSection}
+              />
+            </section>
 
-          <TrackVisibility offset={400}>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <Experiences isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
-        </div>
+            <section data-section="experiences">
+              <Experiences
+                isVisible={sectionsVisibility.experiences}
+                setSection={bar.setSection}
+              />
+            </section>
+          </div>
 
-        <div className="background-glow-green">
-          <TrackVisibility offset={2900}>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <div className="box">
-                <Projects isVisible={isVisible} setSection={bar.setSection} />
-              </div>
-            )}
-          </TrackVisibility>
+          <div className="background-glow-green">
+            <section data-section="projects">
+              <Projects
+                isVisible={sectionsVisibility.projects}
+                setSection={bar.setSection}
+              />
+            </section>
 
-          <TrackVisibility partialVisibility>
-            {({ isVisible }: { isVisible: boolean }) => (
-              <Contact isVisible={isVisible} setSection={bar.setSection} />
-            )}
-          </TrackVisibility>
-          <Footer />
+            <section data-section="contact">
+              <Contact
+                isVisible={sectionsVisibility.contact}
+                setSection={bar.setSection}
+              />
+            </section>
+            <Footer />
+          </div>
         </div>
       </main>
     </>

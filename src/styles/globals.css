@@ -22,15 +22,15 @@
   }
 
   .background-glow-blue {
-    background-image: radial-gradient(circle at 50% 0, #000524, #000 80%);
+    background-image: radial-gradient(circle at 50% 0, #010314, #000 80%);
   }
 
   .background-glow-green {
     background-image: radial-gradient(circle at 70% 90%, #021b1ddc, #000 80%);
   }
 
-  .background-glow-red {
-    background-image: radial-gradient(circle at left, #3104797c, #000 32%);
+  .background-glow-pink {
+    background-image: radial-gradient(circle at left, #22084b65, #000 32%);
   }
 
   .title-text-clamp {
