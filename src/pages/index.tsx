@@ -148,7 +148,17 @@ export default function Home() {
 
       <main className="scrollbar-hide relative m-auto overflow-clip w-[calc(100vw-2px)] max-w-[2560px] bg-black">
         <Ribons section={bar.section} />
+
         <div ref={containerRef}>
+          <div
+            className="absolute inset-0 mx-10 grid grid-cols-3 divide-x-[1px] divide-[#333]/10
+            border-x-[1px] border-[#333]/10 md:mx-20 md:grid-cols-4 xl:mx-40"
+          >
+            <div />
+            <div />
+            <div />
+            <div className="hidden md:flex" />
+          </div>
           <div className="background-glow-blue">
             <section data-section="hero">
               <Hero
