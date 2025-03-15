@@ -81,7 +81,7 @@ export default function Projects({
 
       <div
         className={`image-container mt-6 grid w-full grid-flow-row-dense
-          grid-cols-1 sm:mt-16 lg:grid-cols-4 gap-5
+          grid-cols-1 sm:mt-16 lg:grid-cols-4
         `}
       >
         {projects.map((project, idx) => {
