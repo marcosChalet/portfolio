@@ -53,7 +53,7 @@ export default function Footer() {
             );
           })}
         </div>
-        <span className="text-md mt-20 py-5 font-bold sm:text-xl">
+        <span className="text-md mt-20 py-5 font-bold sm:text-lg">
           Develop By Marcos Chalet
         </span>
       </footer>

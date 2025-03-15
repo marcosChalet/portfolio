@@ -46,7 +46,7 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
   return (
     <Layout
       id={'contact'}
-      articleClass="flex-col w-full my-28 sm:my-52"
+      articleClass="flex-col w-full my-28"
       sectionClass="mx-2"
     >
       <h1
@@ -79,7 +79,6 @@ export default function Contact({ isVisible, setSection }: SectionVisibleType) {
 
             {!user.isSignedIn ? (
               <SignInButton
-                fallbackRedirectUrl={"/#contact"}
                 children={
                   <img
                     src="/imgs/google.svg"

@@ -13,7 +13,7 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/toDoList-java-react',
   },
   {
-    title: 'Chalet blog',
+    title: '',
     img: '/imgs/blog-project.png',
     alt: 'blog pessoal desenvolvido em Next.js',
     description:
@@ -22,7 +22,7 @@ const projects = [
     githubLink: 'https://github.com/marcosChalet/chalet-blog',
   },
   {
-    title: '',
+    title: 'ecommerce',
     img: '/imgs/ecommerce-3-project.png',
     alt: 'imagem de um ecommerce',
     description: 'eCommerce desenvolvido com HTML5, CSS3 e JavaScript.',
@@ -69,7 +69,7 @@ export default function Projects({
     <Layout
       id={'projects'}
       sectionClass={`sm:py-10 justify-center`}
-      articleClass="flex-wrap items-center justify-center sm:pt-20 pb-5"
+      articleClass="flex-wrap items-center justify-center sm:pt-20"
     >
       <h1
         className={`title-text-clamp bg-gradient-to-r from-fuchsia-500
@@ -81,15 +81,15 @@ export default function Projects({
 
       <div
         className={`image-container mt-6 grid w-full grid-flow-row-dense
-          grid-cols-1 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4
+          grid-cols-1 sm:mt-16 lg:grid-cols-4 gap-5
         `}
       >
         {projects.map((project, idx) => {
           return (
             <div
               key={project.githubLink}
-              className={`card h-[480px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0
-              border-[#777]/10 p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-4 sm:h-[800px]
+              className={`card h-[300px] overflow-hidden rounded-sm border-[1px] border-r-0 border-l-0
+                border-[#777]/10 sm:p-4 font-bold text-slate-400 hover:cursor-pointer sm:col-span-4 sm:h-fit
               `}
             >
               <div className="group relative flex h-full flex-col justify-start">
@@ -105,7 +105,7 @@ export default function Projects({
                     <a
                       href={project.productionLink}
                       target="_blank"
-                      className="flex h-9 w-28 items-center justify-center rounded-md border-[1px]
+                      className="flex h-7 w-24 items-center justify-center rounded-md border-[1px]
                         border-slate-700 bg-gray-600/10 text-sm uppercase
                         hover:border-slate-500 sm:ml-1 sm:mt-5 sm:h-12 sm:w-32 sm:p-2"
                     >
@@ -114,7 +114,7 @@ export default function Projects({
                     <a
                       href={project.githubLink}
                       target="_blank"
-                      className="flex h-9 w-28 items-center justify-center  rounded-md border-[1px]
+                      className="flex h-7 w-24 items-center justify-center  rounded-md border-[1px]
                       border-slate-700 bg-gray-600/10 text-sm uppercase hover:border-slate-500
                       sm:mt-5 sm:h-12 sm:w-32 sm:p-2"
                     >
@@ -133,7 +133,7 @@ export default function Projects({
                   height={idx === 4 ? 1100 : 900}
                   src={project.img}
                   alt={project.alt}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover sm:object-contain"
                 />
                 <span className="absolute top-2 left-3 group-hover:opacity-0">
                   {project.title}
