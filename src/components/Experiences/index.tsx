@@ -12,38 +12,38 @@ type ExprerienceType = {
 const experiences: ExprerienceType[] = [
   {
     id: 1,
-    date: 'Jan 2024 até Fev 2025',
-    local: 'Compass UOL',
+    date: 'Mai 2024 - Atual',
+    local: 'Universidade Federal do Cariri',
     description:
-      'Desenvolvedor Web Full Stack com experiência em digital commerce. Atuei no desenvolvimento de aplicações utilizando React, TypeScript, Java, Spring Boot e NestJS, contribuindo para soluções escaláveis e de alto desempenho. Participei ativamente dos projetos Divvino, ClubeD e do Backoffice do ClubeD para o supermercado Angeloni, focando na criação, otimização, integração de sistemas e aprimoramento da experiência do usuário.',
+      'Atualmente, foco no desenvolvimento e na conformidade de sistemas acadêmicos, liderando a implementação da geração de diplomas digitais segundo as diretrizes do MEC. Paralelamente, atuo na otimização do SIGAA, refinando regras de negócio e aprimorando módulos de extensão e graduação para garantir uma gestão acadêmica mais eficiente.',
   },
   {
     id: 2,
-    date: 'Abr 2023 até Fev 2025',
-    local: 'Calang.io',
+    date: 'Jan 2024 - Fev 2025',
+    local: 'Compass UOL',
     description:
-      'Trabalho voluntário na empresa júnior utilizando React e TypeScript em projetos para pequenas empresas da região do Cariri.',
+      'Integrei o desenvolvimento de interfaces para o e-commerce Divvino e o Backoffice do ClubeD, criando componentes responsivos e ferramentas analíticas integradas ao ecossistema Microsoft. Além da entrega técnica, desempenhei um papel ativo na cultura do time, mentorando desenvolvedores iniciantes e mantendo integrações críticas de pagamento.',
   },
   {
     id: 3,
-    date: 'Jul 2023 até Dez 2023',
-    local: 'Universidade Federal do Cariri',
+    date: 'Abr 2023 - Fev 2025',
+    local: 'Calang.io',
     description:
-      'Estágio em desenvolvimento web e DevOps, com foco na implantação e customização do sistema de processo seletivo na UFCA. Durante o estágio, participei da migração de módulos de um sistema legado para microsserviços, utilizando Docker para conteinerização. Durante o projeto, trabalhei diretamente com tecnologias como Java, PostgreSQL, Docker, Apache, Eureka e Kong.',
+      'Atuei impulsionando a presença digital de pequenas e médias empresas através da criação de SPAs modernas. Implementei uma nova stack tecnológica baseada em Vite e Tailwind CSS que otimizou o fluxo de trabalho, resultando em uma redução de 40% no tempo de entrega dos projetos e maior performance nas aplicações finais.',
   },
   {
     id: 4,
-    date: 'Abr 2022 até Nov 2022',
+    date: 'Ago 2023 - Dez 2023',
     local: 'Universidade Federal do Cariri',
     description:
-      'Durante a monitoria em estruturas de dados e introdução à computação eu elaborei material didático, criei exercícios e prestei assistência aos alunos por meio de monitorias em sala de aula, resultando em um aumento em 20% na taxa de aprovação da disciplina. Essa experiência agregou, 1/2 além da minha capacidade de comunicação, na minha base em algoritmos, proporcionando um conhecimento sólido e aprofundado na área.',
+      'Iniciei minha jornada na instituição contribuindo para a modernização da infraestrutura de software, participando da migração estratégica de sistemas legados para uma arquitetura de microsserviços. Também colaborei na automatização de processos seletivos (SIGPS), assegurando a estabilidade e a conformidade legal das novas implementações.',
   },
   {
     id: 5,
-    date: 'Mar 2020 até Mar 2021',
-    local: 'Universidade Federal do Ceará',
+    date: 'Abr 2022 - Nov 2022',
+    local: 'Universidade Federal do Cariri',
     description:
-      'Durante minha experiência acadêmica em Computação Gráfica eu realizei pesquisas, desenvolvi materiais didáticos e auxiliei no acompanhamento da disciplina de Computação Gráfica.',
+      'Dediquei-me ao ensino e suporte acadêmico na disciplina de Algoritmos, desenvolvendo materiais didáticos personalizados e novas abordagens de ensino. Essa iniciativa fortaleceu a base lógica dos estudantes e resultou em um aumento expressivo de 20% na taxa de aprovação da turma.',
   },
 ];
 
