@@ -18,7 +18,7 @@ const projects = [
     alt: 'blog pessoal desenvolvido em Next.js',
     description:
       'Blog pessoal para compartilhar meus conhecimentos e o conteúdo que venho estudando sobre desenvolvimento web.',
-    productionLink: 'https://blog.mchalet.xyz/',
+    productionLink: 'https://blog.marcoschalet.com/',
     githubLink: 'https://github.com/marcosChalet/chalet-blog',
   },
   {
